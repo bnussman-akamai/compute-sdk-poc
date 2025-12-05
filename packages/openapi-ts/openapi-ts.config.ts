@@ -5,7 +5,7 @@ export default defineConfig({
   output: 'src',
   parser: {
     transforms: {
-      propertiesRequiredByDefault: false,
+      propertiesRequiredByDefault: true,
     },
   },
   plugins: [
