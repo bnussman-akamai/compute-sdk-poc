@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PostImportDomainMutationRequest, PostImportDomainMutationResponse, PostImportDomainPathParams } from "../types/PostImportDomain.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPostImportDomainUrl(apiVersion: PostImportDomainPathParams["apiVersion"]) {
   const res = { method: 'POST', url: `/${apiVersion}/domains/import` as const }  

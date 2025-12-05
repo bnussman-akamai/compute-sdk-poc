@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PutDatabasesMysqlInstanceMutationRequest, PutDatabasesMysqlInstanceMutationResponse, PutDatabasesMysqlInstancePathParams } from "../types/PutDatabasesMysqlInstance.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPutDatabasesMysqlInstanceUrl(apiVersion: PutDatabasesMysqlInstancePathParams["apiVersion"], instanceId: PutDatabasesMysqlInstancePathParams["instanceId"]) {
   const res = { method: 'PUT', url: `/${apiVersion}/databases/mysql/instances/${instanceId}` as const }  

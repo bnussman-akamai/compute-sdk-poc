@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { GetStackScriptsQueryResponse, GetStackScriptsPathParams, GetStackScriptsQueryParams } from "../types/GetStackScripts.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getGetStackScriptsUrl(apiVersion: GetStackScriptsPathParams["apiVersion"]) {
   const res = { method: 'GET', url: `/${apiVersion}/linode/stackscripts` as const }  

@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { GetPlacementGroupQueryResponse, GetPlacementGroupPathParams } from "../types/GetPlacementGroup.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getGetPlacementGroupUrl(apiVersion: GetPlacementGroupPathParams["apiVersion"], groupId: GetPlacementGroupPathParams["groupId"]) {
   const res = { method: 'GET', url: `/${apiVersion}/placement/groups/${groupId}` as const }  

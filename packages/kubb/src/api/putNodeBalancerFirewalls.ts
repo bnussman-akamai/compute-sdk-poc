@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PutNodeBalancerFirewallsMutationRequest, PutNodeBalancerFirewallsMutationResponse, PutNodeBalancerFirewallsPathParams, PutNodeBalancerFirewallsQueryParams } from "../types/PutNodeBalancerFirewalls.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPutNodeBalancerFirewallsUrl(apiVersion: PutNodeBalancerFirewallsPathParams["apiVersion"], nodeBalancerId: PutNodeBalancerFirewallsPathParams["nodeBalancerId"]) {
   const res = { method: 'PUT', url: `/${apiVersion}/nodebalancers/${nodeBalancerId}/firewalls` as const }  

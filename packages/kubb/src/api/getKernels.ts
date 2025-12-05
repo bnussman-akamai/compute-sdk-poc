@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { GetKernelsQueryResponse, GetKernelsPathParams, GetKernelsQueryParams } from "../types/GetKernels.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getGetKernelsUrl(apiVersion: GetKernelsPathParams["apiVersion"]) {
   const res = { method: 'GET', url: `/${apiVersion}/linode/kernels` as const }  

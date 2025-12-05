@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PostResizeLinodeInstanceMutationRequest, PostResizeLinodeInstanceMutationResponse, PostResizeLinodeInstancePathParams } from "../types/PostResizeLinodeInstance.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPostResizeLinodeInstanceUrl(apiVersion: PostResizeLinodeInstancePathParams["apiVersion"], linodeId: PostResizeLinodeInstancePathParams["linodeId"]) {
   const res = { method: 'POST', url: `/${apiVersion}/linode/instances/${linodeId}/resize` as const }  

@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { GetObjectStorageBucketQueryResponse, GetObjectStorageBucketPathParams } from "../types/GetObjectStorageBucket.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getGetObjectStorageBucketUrl(apiVersion: GetObjectStorageBucketPathParams["apiVersion"], regionId: GetObjectStorageBucketPathParams["regionId"], bucket: GetObjectStorageBucketPathParams["bucket"]) {
   const res = { method: 'GET', url: `/${apiVersion}/object-storage/buckets/${regionId}/${bucket}` as const }  

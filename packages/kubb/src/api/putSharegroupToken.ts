@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PutSharegroupTokenMutationRequest, PutSharegroupTokenMutationResponse, PutSharegroupTokenPathParams } from "../types/PutSharegroupToken.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPutSharegroupTokenUrl(apiVersion: PutSharegroupTokenPathParams["apiVersion"], tokenUuid: PutSharegroupTokenPathParams["tokenUuid"]) {
   const res = { method: 'PUT', url: `/${apiVersion}/images/sharegroups/tokens/${tokenUuid}` as const }  

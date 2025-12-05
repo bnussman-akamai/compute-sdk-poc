@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { DeleteDatabasesPostgreSqlInstanceMutationResponse, DeleteDatabasesPostgreSqlInstancePathParams } from "../types/DeleteDatabasesPostgreSqlInstance.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getDeleteDatabasesPostgreSqlInstanceUrl(apiVersion: DeleteDatabasesPostgreSqlInstancePathParams["apiVersion"], instanceId: DeleteDatabasesPostgreSqlInstancePathParams["instanceId"]) {
   const res = { method: 'DELETE', url: `/${apiVersion}/databases/postgresql/instances/${instanceId}` as const }  

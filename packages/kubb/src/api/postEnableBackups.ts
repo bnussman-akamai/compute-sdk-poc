@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PostEnableBackupsMutationResponse, PostEnableBackupsPathParams } from "../types/PostEnableBackups.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPostEnableBackupsUrl(apiVersion: PostEnableBackupsPathParams["apiVersion"], linodeId: PostEnableBackupsPathParams["linodeId"]) {
   const res = { method: 'POST', url: `/${apiVersion}/linode/instances/${linodeId}/backups/enable` as const }  

@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PostCancelAccountMutationRequest, PostCancelAccountMutationResponse, PostCancelAccountPathParams, PostCancelAccount409, PostCancelAccount504 } from "../types/PostCancelAccount.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPostCancelAccountUrl(apiVersion: PostCancelAccountPathParams["apiVersion"]) {
   const res = { method: 'POST', url: `/${apiVersion}/account/cancel` as const }  

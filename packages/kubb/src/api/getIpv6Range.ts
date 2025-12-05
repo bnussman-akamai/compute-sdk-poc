@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { GetIpv6RangeQueryResponse, GetIpv6RangePathParams } from "../types/GetIpv6Range.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getGetIpv6RangeUrl(apiVersion: GetIpv6RangePathParams["apiVersion"], range: GetIpv6RangePathParams["range"]) {
   const res = { method: 'GET', url: `/${apiVersion}/networking/ipv6/ranges/${range}` as const }  

@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PutLkeClusterMutationRequest, PutLkeClusterMutationResponse, PutLkeClusterPathParams } from "../types/PutLkeCluster.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPutLkeClusterUrl(apiVersion: PutLkeClusterPathParams["apiVersion"], clusterId: PutLkeClusterPathParams["clusterId"]) {
   const res = { method: 'PUT', url: `/${apiVersion}/lke/clusters/${clusterId}` as const }  

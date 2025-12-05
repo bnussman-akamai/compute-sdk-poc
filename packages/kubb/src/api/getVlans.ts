@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { GetVlansQueryResponse, GetVlansPathParams, GetVlansQueryParams } from "../types/GetVlans.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getGetVlansUrl(apiVersion: GetVlansPathParams["apiVersion"]) {
   const res = { method: 'GET', url: `/${apiVersion}/networking/vlans` as const }  

@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { DeleteManagedContactMutationResponse, DeleteManagedContactPathParams } from "../types/DeleteManagedContact.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getDeleteManagedContactUrl(apiVersion: DeleteManagedContactPathParams["apiVersion"], contactId: DeleteManagedContactPathParams["contactId"]) {
   const res = { method: 'DELETE', url: `/${apiVersion}/managed/contacts/${contactId}` as const }  

@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { DeleteEntityTransferMutationResponse, DeleteEntityTransferPathParams } from "../types/DeleteEntityTransfer.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getDeleteEntityTransferUrl(apiVersion: DeleteEntityTransferPathParams["apiVersion"], token: DeleteEntityTransferPathParams["token"]) {
   const res = { method: 'DELETE', url: `/${apiVersion}/account/entity-transfers/${token}` as const }  

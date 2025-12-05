@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PutLongviewClientMutationRequest, PutLongviewClientMutationResponse, PutLongviewClientPathParams } from "../types/PutLongviewClient.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPutLongviewClientUrl(apiVersion: PutLongviewClientPathParams["apiVersion"], clientId: PutLongviewClientPathParams["clientId"]) {
   const res = { method: 'PUT', url: `/${apiVersion}/longview/clients/${clientId}` as const }  

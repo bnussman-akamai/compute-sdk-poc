@@ -6,7 +6,7 @@
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.mts",
   "scripts": {
-    "generate": "kubb generate",
+    "generate": "kubb generate && echo \"export * from './.kubb/fetch.ts'\" >> src/index.ts",
     "download": "bun run ./scripts/download.ts",
     "build": "tsdown",
     "build:full": "bun run download && bun run generate && bun run build",

@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PostManagedServiceMutationRequest, PostManagedServiceMutationResponse, PostManagedServicePathParams } from "../types/PostManagedService.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPostManagedServiceUrl(apiVersion: PostManagedServicePathParams["apiVersion"]) {
   const res = { method: 'POST', url: `/${apiVersion}/managed/services` as const }  

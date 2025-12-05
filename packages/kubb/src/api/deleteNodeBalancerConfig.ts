@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { DeleteNodeBalancerConfigMutationResponse, DeleteNodeBalancerConfigPathParams } from "../types/DeleteNodeBalancerConfig.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getDeleteNodeBalancerConfigUrl(apiVersion: DeleteNodeBalancerConfigPathParams["apiVersion"], nodeBalancerId: DeleteNodeBalancerConfigPathParams["nodeBalancerId"], configId: DeleteNodeBalancerConfigPathParams["configId"]) {
   const res = { method: 'DELETE', url: `/${apiVersion}/nodebalancers/${nodeBalancerId}/configs/${configId}` as const }  

@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { GetDatabasesInstancesQueryResponse, GetDatabasesInstancesPathParams, GetDatabasesInstancesQueryParams } from "../types/GetDatabasesInstances.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getGetDatabasesInstancesUrl(apiVersion: GetDatabasesInstancesPathParams["apiVersion"]) {
   const res = { method: 'GET', url: `/${apiVersion}/databases/instances` as const }  

@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PostTicketReplyMutationRequest, PostTicketReplyMutationResponse, PostTicketReplyPathParams } from "../types/PostTicketReply.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPostTicketReplyUrl(apiVersion: PostTicketReplyPathParams["apiVersion"], ticketId: PostTicketReplyPathParams["ticketId"]) {
   const res = { method: 'POST', url: `/${apiVersion}/support/tickets/${ticketId}/replies` as const }  

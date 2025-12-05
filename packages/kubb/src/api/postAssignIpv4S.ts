@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PostAssignIpv4SMutationRequest, PostAssignIpv4SMutationResponse, PostAssignIpv4SPathParams } from "../types/PostAssignIpv4S.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPostAssignIpv4SUrl(apiVersion: PostAssignIpv4SPathParams["apiVersion"]) {
   const res = { method: 'POST', url: `/${apiVersion}/networking/ipv4/assign` as const }  

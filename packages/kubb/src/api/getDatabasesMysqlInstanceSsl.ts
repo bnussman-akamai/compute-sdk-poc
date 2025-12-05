@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { GetDatabasesMysqlInstanceSslQueryResponse, GetDatabasesMysqlInstanceSslPathParams } from "../types/GetDatabasesMysqlInstanceSsl.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getGetDatabasesMysqlInstanceSslUrl(apiVersion: GetDatabasesMysqlInstanceSslPathParams["apiVersion"], instanceId: GetDatabasesMysqlInstanceSslPathParams["instanceId"]) {
   const res = { method: 'GET', url: `/${apiVersion}/databases/mysql/instances/${instanceId}/ssl` as const }  

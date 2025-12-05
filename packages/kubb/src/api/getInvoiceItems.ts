@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { GetInvoiceItemsQueryResponse, GetInvoiceItemsPathParams, GetInvoiceItemsQueryParams } from "../types/GetInvoiceItems.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getGetInvoiceItemsUrl(apiVersion: GetInvoiceItemsPathParams["apiVersion"], invoiceId: GetInvoiceItemsPathParams["invoiceId"]) {
   const res = { method: 'GET', url: `/${apiVersion}/account/invoices/${invoiceId}/items` as const }  

@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { GetProfileAppsQueryResponse, GetProfileAppsPathParams, GetProfileAppsQueryParams } from "../types/GetProfileApps.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getGetProfileAppsUrl(apiVersion: GetProfileAppsPathParams["apiVersion"]) {
   const res = { method: 'GET', url: `/${apiVersion}/profile/apps` as const }  

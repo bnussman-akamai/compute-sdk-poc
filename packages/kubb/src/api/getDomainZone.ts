@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { GetDomainZoneQueryResponse, GetDomainZonePathParams } from "../types/GetDomainZone.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getGetDomainZoneUrl(apiVersion: GetDomainZonePathParams["apiVersion"], domainId: GetDomainZonePathParams["domainId"]) {
   const res = { method: 'GET', url: `/${apiVersion}/domains/${domainId}/zone-file` as const }  

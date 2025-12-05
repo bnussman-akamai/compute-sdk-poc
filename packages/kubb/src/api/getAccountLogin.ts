@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { GetAccountLoginQueryResponse, GetAccountLoginPathParams } from "../types/GetAccountLogin.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getGetAccountLoginUrl(apiVersion: GetAccountLoginPathParams["apiVersion"], loginId: GetAccountLoginPathParams["loginId"]) {
   const res = { method: 'GET', url: `/${apiVersion}/account/logins/${loginId}` as const }  

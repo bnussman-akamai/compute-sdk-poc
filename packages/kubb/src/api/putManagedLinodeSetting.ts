@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PutManagedLinodeSettingMutationRequest, PutManagedLinodeSettingMutationResponse, PutManagedLinodeSettingPathParams } from "../types/PutManagedLinodeSetting.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPutManagedLinodeSettingUrl(apiVersion: PutManagedLinodeSettingPathParams["apiVersion"], linodeId: PutManagedLinodeSettingPathParams["linodeId"]) {
   const res = { method: 'PUT', url: `/${apiVersion}/managed/linode-settings/${linodeId}` as const }  

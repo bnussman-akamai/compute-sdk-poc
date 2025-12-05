@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { DeleteVpcMutationResponse, DeleteVpcPathParams } from "../types/DeleteVpc.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getDeleteVpcUrl(apiVersion: DeleteVpcPathParams["apiVersion"], vpcId: DeleteVpcPathParams["vpcId"]) {
   const res = { method: 'DELETE', url: `/${apiVersion}/vpcs/${vpcId}` as const }  

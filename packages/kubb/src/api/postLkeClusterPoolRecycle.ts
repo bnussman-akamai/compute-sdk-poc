@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PostLkeClusterPoolRecycleMutationResponse, PostLkeClusterPoolRecyclePathParams } from "../types/PostLkeClusterPoolRecycle.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPostLkeClusterPoolRecycleUrl(apiVersion: PostLkeClusterPoolRecyclePathParams["apiVersion"], clusterId: PostLkeClusterPoolRecyclePathParams["clusterId"], poolId: PostLkeClusterPoolRecyclePathParams["poolId"]) {
   const res = { method: 'POST', url: `/${apiVersion}/lke/clusters/${clusterId}/pools/${poolId}/recycle` as const }  

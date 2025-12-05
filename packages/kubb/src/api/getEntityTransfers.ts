@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { GetEntityTransfersQueryResponse, GetEntityTransfersPathParams, GetEntityTransfersQueryParams } from "../types/GetEntityTransfers.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getGetEntityTransfersUrl(apiVersion: GetEntityTransfersPathParams["apiVersion"]) {
   const res = { method: 'GET', url: `/${apiVersion}/account/entity-transfers` as const }  

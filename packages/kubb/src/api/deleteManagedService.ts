@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { DeleteManagedServiceMutationResponse, DeleteManagedServicePathParams } from "../types/DeleteManagedService.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getDeleteManagedServiceUrl(apiVersion: DeleteManagedServicePathParams["apiVersion"], serviceId: DeleteManagedServicePathParams["serviceId"]) {
   const res = { method: 'DELETE', url: `/${apiVersion}/managed/services/${serviceId}` as const }  

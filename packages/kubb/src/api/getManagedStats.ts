@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { GetManagedStatsQueryResponse, GetManagedStatsPathParams } from "../types/GetManagedStats.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getGetManagedStatsUrl(apiVersion: GetManagedStatsPathParams["apiVersion"]) {
   const res = { method: 'GET', url: `/${apiVersion}/managed/stats` as const }  

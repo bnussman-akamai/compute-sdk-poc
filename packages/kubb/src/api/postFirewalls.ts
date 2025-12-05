@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PostFirewallsMutationRequest, PostFirewallsMutationResponse, PostFirewallsPathParams } from "../types/PostFirewalls.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPostFirewallsUrl(apiVersion: PostFirewallsPathParams["apiVersion"]) {
   const res = { method: 'POST', url: `/${apiVersion}/networking/firewalls` as const }  

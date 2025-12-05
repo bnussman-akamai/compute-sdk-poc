@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { GetIpv6PoolsQueryResponse, GetIpv6PoolsPathParams, GetIpv6PoolsQueryParams } from "../types/GetIpv6Pools.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getGetIpv6PoolsUrl(apiVersion: GetIpv6PoolsPathParams["apiVersion"]) {
   const res = { method: 'GET', url: `/${apiVersion}/networking/ipv6/pools` as const }  

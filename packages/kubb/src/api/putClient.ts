@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PutClientMutationRequest, PutClientMutationResponse, PutClientPathParams } from "../types/PutClient.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPutClientUrl(apiVersion: PutClientPathParams["apiVersion"], clientId: PutClientPathParams["clientId"]) {
   const res = { method: 'PUT', url: `/${apiVersion}/account/oauth-clients/${clientId}` as const }  

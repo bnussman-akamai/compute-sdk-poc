@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PostServiceTransferMutationRequest, PostServiceTransferMutationResponse, PostServiceTransferPathParams } from "../types/PostServiceTransfer.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPostServiceTransferUrl(apiVersion: PostServiceTransferPathParams["apiVersion"]) {
   const res = { method: 'POST', url: `/${apiVersion}/account/service-transfers` as const }  

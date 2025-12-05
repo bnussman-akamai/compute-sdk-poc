@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PostAllocateIpMutationRequest, PostAllocateIpMutationResponse, PostAllocateIpPathParams } from "../types/PostAllocateIp.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPostAllocateIpUrl(apiVersion: PostAllocateIpPathParams["apiVersion"]) {
   const res = { method: 'POST', url: `/${apiVersion}/networking/ips` as const }  

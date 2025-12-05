@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { GetFirewallQueryResponse, GetFirewallPathParams } from "../types/GetFirewall.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getGetFirewallUrl(apiVersion: GetFirewallPathParams["apiVersion"], firewallId: GetFirewallPathParams["firewallId"]) {
   const res = { method: 'GET', url: `/${apiVersion}/networking/firewalls/${firewallId}` as const }  

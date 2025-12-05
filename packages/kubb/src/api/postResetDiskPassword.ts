@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PostResetDiskPasswordMutationRequest, PostResetDiskPasswordMutationResponse, PostResetDiskPasswordPathParams } from "../types/PostResetDiskPassword.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPostResetDiskPasswordUrl(apiVersion: PostResetDiskPasswordPathParams["apiVersion"], linodeId: PostResetDiskPasswordPathParams["linodeId"], diskId: PostResetDiskPasswordPathParams["diskId"]) {
   const res = { method: 'POST', url: `/${apiVersion}/linode/instances/${linodeId}/disks/${diskId}/password` as const }  

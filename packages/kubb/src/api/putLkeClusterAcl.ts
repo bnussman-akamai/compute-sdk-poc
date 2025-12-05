@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PutLkeClusterAclMutationRequest, PutLkeClusterAclMutationResponse, PutLkeClusterAclPathParams, PutLkeClusterAcl400, PutLkeClusterAcl404 } from "../types/PutLkeClusterAcl.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPutLkeClusterAclUrl(apiVersion: PutLkeClusterAclPathParams["apiVersion"], clusterId: PutLkeClusterAclPathParams["clusterId"]) {
   const res = { method: 'PUT', url: `/${apiVersion}/lke/clusters/${clusterId}/control_plane_acl` as const }  

@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PutIpMutationRequest, PutIpMutationResponse, PutIpPathParams } from "../types/PutIp.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPutIpUrl(apiVersion: PutIpPathParams["apiVersion"], address: PutIpPathParams["address"]) {
   const res = { method: 'PUT', url: `/${apiVersion}/networking/ips/${address}` as const }  

@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { DeleteStackScriptMutationResponse, DeleteStackScriptPathParams } from "../types/DeleteStackScript.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getDeleteStackScriptUrl(apiVersion: DeleteStackScriptPathParams["apiVersion"], stackscriptId: DeleteStackScriptPathParams["stackscriptId"]) {
   const res = { method: 'DELETE', url: `/${apiVersion}/linode/stackscripts/${stackscriptId}` as const }  

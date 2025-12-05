@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PostCloneDomainMutationRequest, PostCloneDomainMutationResponse, PostCloneDomainPathParams } from "../types/PostCloneDomain.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPostCloneDomainUrl(apiVersion: PostCloneDomainPathParams["apiVersion"], domainId: PostCloneDomainPathParams["domainId"]) {
   const res = { method: 'POST', url: `/${apiVersion}/domains/${domainId}/clone` as const }  

@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { DeleteIpv6RangeMutationResponse, DeleteIpv6RangePathParams } from "../types/DeleteIpv6Range.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getDeleteIpv6RangeUrl(apiVersion: DeleteIpv6RangePathParams["apiVersion"], range: DeleteIpv6RangePathParams["range"]) {
   const res = { method: 'DELETE', url: `/${apiVersion}/networking/ipv6/ranges/${range}` as const }  

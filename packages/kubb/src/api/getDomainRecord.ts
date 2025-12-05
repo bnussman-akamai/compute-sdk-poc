@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { GetDomainRecordQueryResponse, GetDomainRecordPathParams } from "../types/GetDomainRecord.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getGetDomainRecordUrl(apiVersion: GetDomainRecordPathParams["apiVersion"], domainId: GetDomainRecordPathParams["domainId"], recordId: GetDomainRecordPathParams["recordId"]) {
   const res = { method: 'GET', url: `/${apiVersion}/domains/${domainId}/records/${recordId}` as const }  

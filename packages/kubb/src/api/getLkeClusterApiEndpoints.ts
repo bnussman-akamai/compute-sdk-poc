@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { GetLkeClusterApiEndpointsQueryResponse, GetLkeClusterApiEndpointsPathParams } from "../types/GetLkeClusterApiEndpoints.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getGetLkeClusterApiEndpointsUrl(apiVersion: GetLkeClusterApiEndpointsPathParams["apiVersion"], clusterId: GetLkeClusterApiEndpointsPathParams["clusterId"]) {
   const res = { method: 'GET', url: `/${apiVersion}/lke/clusters/${clusterId}/api-endpoints` as const }  

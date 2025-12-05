@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PostEventSeenMutationResponse, PostEventSeenPathParams } from "../types/PostEventSeen.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPostEventSeenUrl(apiVersion: PostEventSeenPathParams["apiVersion"], eventId: PostEventSeenPathParams["eventId"]) {
   const res = { method: 'POST', url: `/${apiVersion}/account/events/${eventId}/seen` as const }  

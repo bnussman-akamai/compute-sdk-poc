@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { GetAlertDefinitionsForServiceTypeQueryResponse, GetAlertDefinitionsForServiceTypePathParams } from "../types/GetAlertDefinitionsForServiceType.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getGetAlertDefinitionsForServiceTypeUrl(apiVersion: GetAlertDefinitionsForServiceTypePathParams["apiVersion"], serviceType: GetAlertDefinitionsForServiceTypePathParams["serviceType"]) {
   const res = { method: 'GET', url: `/${apiVersion}/monitor/services/${serviceType}/alert-definitions` as const }  

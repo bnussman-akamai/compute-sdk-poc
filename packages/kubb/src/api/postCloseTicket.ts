@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PostCloseTicketMutationResponse, PostCloseTicketPathParams } from "../types/PostCloseTicket.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPostCloseTicketUrl(apiVersion: PostCloseTicketPathParams["apiVersion"], ticketId: PostCloseTicketPathParams["ticketId"]) {
   const res = { method: 'POST', url: `/${apiVersion}/support/tickets/${ticketId}/close` as const }  

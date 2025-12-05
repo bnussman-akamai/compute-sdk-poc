@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PostDomainRecordMutationRequest, PostDomainRecordMutationResponse, PostDomainRecordPathParams } from "../types/PostDomainRecord.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPostDomainRecordUrl(apiVersion: PostDomainRecordPathParams["apiVersion"], domainId: PostDomainRecordPathParams["domainId"]) {
   const res = { method: 'POST', url: `/${apiVersion}/domains/${domainId}/records` as const }  

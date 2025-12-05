@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PostMutateLinodeInstanceMutationRequest, PostMutateLinodeInstanceMutationResponse, PostMutateLinodeInstancePathParams } from "../types/PostMutateLinodeInstance.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPostMutateLinodeInstanceUrl(apiVersion: PostMutateLinodeInstancePathParams["apiVersion"], linodeId: PostMutateLinodeInstancePathParams["linodeId"]) {
   const res = { method: 'POST', url: `/${apiVersion}/linode/instances/${linodeId}/mutate` as const }  

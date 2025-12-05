@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PostAddLinodeConfigMutationRequest, PostAddLinodeConfigMutationResponse, PostAddLinodeConfigPathParams } from "../types/PostAddLinodeConfig.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPostAddLinodeConfigUrl(apiVersion: PostAddLinodeConfigPathParams["apiVersion"], linodeId: PostAddLinodeConfigPathParams["linodeId"]) {
   const res = { method: 'POST', url: `/${apiVersion}/linode/instances/${linodeId}/configs` as const }  

@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PutPlacementGroupMutationRequest, PutPlacementGroupMutationResponse, PutPlacementGroupPathParams } from "../types/PutPlacementGroup.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPutPlacementGroupUrl(apiVersion: PutPlacementGroupPathParams["apiVersion"], groupId: PutPlacementGroupPathParams["groupId"]) {
   const res = { method: 'PUT', url: `/${apiVersion}/placement/groups/${groupId}` as const }  

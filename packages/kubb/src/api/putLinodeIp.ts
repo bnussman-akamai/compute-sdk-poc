@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PutLinodeIpMutationRequest, PutLinodeIpMutationResponse, PutLinodeIpPathParams } from "../types/PutLinodeIp.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPutLinodeIpUrl(apiVersion: PutLinodeIpPathParams["apiVersion"], linodeId: PutLinodeIpPathParams["linodeId"], address: PutLinodeIpPathParams["address"]) {
   const res = { method: 'PUT', url: `/${apiVersion}/linode/instances/${linodeId}/ips/${address}` as const }  

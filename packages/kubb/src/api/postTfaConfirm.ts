@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PostTfaConfirmMutationRequest, PostTfaConfirmMutationResponse, PostTfaConfirmPathParams } from "../types/PostTfaConfirm.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPostTfaConfirmUrl(apiVersion: PostTfaConfirmPathParams["apiVersion"]) {
   const res = { method: 'POST', url: `/${apiVersion}/profile/tfa-enable-confirm` as const }  

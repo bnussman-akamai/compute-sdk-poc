@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { GetObjectStorageQuotaQueryResponse, GetObjectStorageQuotaPathParams } from "../types/GetObjectStorageQuota.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getGetObjectStorageQuotaUrl(apiVersion: GetObjectStorageQuotaPathParams["apiVersion"], objQuotaId: GetObjectStorageQuotaPathParams["objQuotaId"]) {
   const res = { method: 'GET', url: `/${apiVersion}/object-storage/quotas/${objQuotaId}` as const }  

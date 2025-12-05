@@ -2038,4 +2038,4 @@ export * from "./types/SuspendDatabasesMysqlInstance.ts";
 export * from "./types/SuspendDatabasesPostgreSqlInstance.ts";
 export * from "./types/User.ts";
 export * from "./types/UserType.ts";
-export * from "./types/XFilter.ts";
+export * from "./types/XFilter.ts";export * from './.kubb/fetch.ts'

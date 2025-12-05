@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { GetSshKeysQueryResponse, GetSshKeysPathParams, GetSshKeysQueryParams } from "../types/GetSshKeys.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getGetSshKeysUrl(apiVersion: GetSshKeysPathParams["apiVersion"]) {
   const res = { method: 'GET', url: `/${apiVersion}/profile/sshkeys` as const }  

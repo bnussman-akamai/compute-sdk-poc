@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PostProfilePhoneNumberVerifyMutationRequest, PostProfilePhoneNumberVerifyMutationResponse, PostProfilePhoneNumberVerifyPathParams } from "../types/PostProfilePhoneNumberVerify.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPostProfilePhoneNumberVerifyUrl(apiVersion: PostProfilePhoneNumberVerifyPathParams["apiVersion"]) {
   const res = { method: 'POST', url: `/${apiVersion}/profile/phone-number/verify` as const }  

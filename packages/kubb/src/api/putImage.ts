@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PutImageMutationRequest, PutImageMutationResponse, PutImagePathParams } from "../types/PutImage.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPutImageUrl(apiVersion: PutImagePathParams["apiVersion"], imageId: PutImagePathParams["imageId"]) {
   const res = { method: 'PUT', url: `/${apiVersion}/images/${imageId}` as const }  

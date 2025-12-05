@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { DeleteLinodeIpMutationResponse, DeleteLinodeIpPathParams } from "../types/DeleteLinodeIp.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getDeleteLinodeIpUrl(apiVersion: DeleteLinodeIpPathParams["apiVersion"], linodeId: DeleteLinodeIpPathParams["linodeId"], address: DeleteLinodeIpPathParams["address"]) {
   const res = { method: 'DELETE', url: `/${apiVersion}/linode/instances/${linodeId}/ips/${address}` as const }  

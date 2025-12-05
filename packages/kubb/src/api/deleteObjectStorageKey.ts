@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { DeleteObjectStorageKeyMutationResponse, DeleteObjectStorageKeyPathParams } from "../types/DeleteObjectStorageKey.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getDeleteObjectStorageKeyUrl(apiVersion: DeleteObjectStorageKeyPathParams["apiVersion"], keyId: DeleteObjectStorageKeyPathParams["keyId"]) {
   const res = { method: 'DELETE', url: `/${apiVersion}/object-storage/keys/${keyId}` as const }  

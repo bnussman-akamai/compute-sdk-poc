@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { GetAccountAvailabilityQueryResponse, GetAccountAvailabilityPathParams } from "../types/GetAccountAvailability.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getGetAccountAvailabilityUrl(apiVersion: GetAccountAvailabilityPathParams["apiVersion"], regionId: GetAccountAvailabilityPathParams["regionId"]) {
   const res = { method: 'GET', url: `/${apiVersion}/account/availability/${regionId}` as const }  

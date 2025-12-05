@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { DeleteVolumeMutationResponse, DeleteVolumePathParams } from "../types/DeleteVolume.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getDeleteVolumeUrl(apiVersion: DeleteVolumePathParams["apiVersion"], volumeId: DeleteVolumePathParams["volumeId"]) {
   const res = { method: 'DELETE', url: `/${apiVersion}/volumes/${volumeId}` as const }  

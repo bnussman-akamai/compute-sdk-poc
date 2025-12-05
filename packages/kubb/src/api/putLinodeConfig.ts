@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PutLinodeConfigMutationRequest, PutLinodeConfigMutationResponse, PutLinodeConfigPathParams } from "../types/PutLinodeConfig.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPutLinodeConfigUrl(apiVersion: PutLinodeConfigPathParams["apiVersion"], linodeId: PutLinodeConfigPathParams["linodeId"], configId: PutLinodeConfigPathParams["configId"]) {
   const res = { method: 'PUT', url: `/${apiVersion}/linode/instances/${linodeId}/configs/${configId}` as const }  

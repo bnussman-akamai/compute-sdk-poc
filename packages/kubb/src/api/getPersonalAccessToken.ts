@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { GetPersonalAccessTokenQueryResponse, GetPersonalAccessTokenPathParams } from "../types/GetPersonalAccessToken.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getGetPersonalAccessTokenUrl(apiVersion: GetPersonalAccessTokenPathParams["apiVersion"], tokenId: GetPersonalAccessTokenPathParams["tokenId"]) {
   const res = { method: 'GET', url: `/${apiVersion}/profile/tokens/${tokenId}` as const }  

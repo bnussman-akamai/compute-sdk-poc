@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PutUserGrantsMutationRequest, PutUserGrantsMutationResponse, PutUserGrantsPathParams } from "../types/PutUserGrants.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPutUserGrantsUrl(apiVersion: PutUserGrantsPathParams["apiVersion"], username: PutUserGrantsPathParams["username"]) {
   const res = { method: 'PUT', url: `/${apiVersion}/account/users/${username}/grants` as const }  

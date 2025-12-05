@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PostReadMetricMutationRequest, PostReadMetricMutationResponse, PostReadMetricPathParams } from "../types/PostReadMetric.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPostReadMetricUrl(serviceType: PostReadMetricPathParams["serviceType"], apiVersion: PostReadMetricPathParams["apiVersion"]) {
   const res = { method: 'POST', url: `/${apiVersion}/monitor/services/${serviceType}/metrics` as const }  

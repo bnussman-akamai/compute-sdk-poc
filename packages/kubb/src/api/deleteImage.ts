@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { DeleteImageMutationResponse, DeleteImagePathParams } from "../types/DeleteImage.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getDeleteImageUrl(apiVersion: DeleteImagePathParams["apiVersion"], imageId: DeleteImagePathParams["imageId"]) {
   const res = { method: 'DELETE', url: `/${apiVersion}/images/${imageId}` as const }  

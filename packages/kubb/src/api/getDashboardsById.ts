@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { GetDashboardsByIdQueryResponse, GetDashboardsByIdPathParams } from "../types/GetDashboardsById.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getGetDashboardsByIdUrl(apiVersion: GetDashboardsByIdPathParams["apiVersion"], dashboardId: GetDashboardsByIdPathParams["dashboardId"]) {
   const res = { method: 'GET', url: `/${apiVersion}/monitor/dashboards/${dashboardId}` as const }  

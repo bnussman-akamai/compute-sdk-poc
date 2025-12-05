@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { GetManagedContactQueryResponse, GetManagedContactPathParams } from "../types/GetManagedContact.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getGetManagedContactUrl(apiVersion: GetManagedContactPathParams["apiVersion"], contactId: GetManagedContactPathParams["contactId"]) {
   const res = { method: 'GET', url: `/${apiVersion}/managed/contacts/${contactId}` as const }  

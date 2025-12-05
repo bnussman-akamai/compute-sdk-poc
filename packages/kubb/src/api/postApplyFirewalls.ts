@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PostApplyFirewallsMutationResponse, PostApplyFirewallsPathParams } from "../types/PostApplyFirewalls.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPostApplyFirewallsUrl(apiVersion: PostApplyFirewallsPathParams["apiVersion"], linodeId: PostApplyFirewallsPathParams["linodeId"]) {
   const res = { method: 'POST', url: `/${apiVersion}/linode/instances/${linodeId}/firewalls/apply` as const }  

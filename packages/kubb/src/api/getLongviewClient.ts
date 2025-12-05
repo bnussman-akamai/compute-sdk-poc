@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { GetLongviewClientQueryResponse, GetLongviewClientPathParams } from "../types/GetLongviewClient.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getGetLongviewClientUrl(apiVersion: GetLongviewClientPathParams["apiVersion"], clientId: GetLongviewClientPathParams["clientId"]) {
   const res = { method: 'GET', url: `/${apiVersion}/longview/clients/${clientId}` as const }  

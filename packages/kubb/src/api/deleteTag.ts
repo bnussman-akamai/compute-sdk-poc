@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { DeleteTagMutationResponse, DeleteTagPathParams } from "../types/DeleteTag.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getDeleteTagUrl(apiVersion: DeleteTagPathParams["apiVersion"], tagLabel: DeleteTagPathParams["tagLabel"]) {
   const res = { method: 'DELETE', url: `/${apiVersion}/tags/${tagLabel}` as const }  

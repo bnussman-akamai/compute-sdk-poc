@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { GetVpcIpsQueryResponse, GetVpcIpsPathParams, GetVpcIpsQueryParams } from "../types/GetVpcIps.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getGetVpcIpsUrl(apiVersion: GetVpcIpsPathParams["apiVersion"], vpcId: GetVpcIpsPathParams["vpcId"]) {
   const res = { method: 'GET', url: `/${apiVersion}/vpcs/${vpcId}/ips` as const }  

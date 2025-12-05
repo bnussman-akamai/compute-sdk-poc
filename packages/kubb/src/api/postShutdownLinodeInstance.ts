@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PostShutdownLinodeInstanceMutationResponse, PostShutdownLinodeInstancePathParams } from "../types/PostShutdownLinodeInstance.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPostShutdownLinodeInstanceUrl(apiVersion: PostShutdownLinodeInstancePathParams["apiVersion"], linodeId: PostShutdownLinodeInstancePathParams["linodeId"]) {
   const res = { method: 'POST', url: `/${apiVersion}/linode/instances/${linodeId}/shutdown` as const }  

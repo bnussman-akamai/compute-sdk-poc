@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { GetLinodeStatsByYearMonthQueryResponse, GetLinodeStatsByYearMonthPathParams } from "../types/GetLinodeStatsByYearMonth.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getGetLinodeStatsByYearMonthUrl(apiVersion: GetLinodeStatsByYearMonthPathParams["apiVersion"], linodeId: GetLinodeStatsByYearMonthPathParams["linodeId"], year: GetLinodeStatsByYearMonthPathParams["year"], month: GetLinodeStatsByYearMonthPathParams["month"]) {
   const res = { method: 'GET', url: `/${apiVersion}/linode/instances/${linodeId}/stats/${year}/${month}` as const }  

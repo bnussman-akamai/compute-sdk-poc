@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { GetManagedSshKeyQueryResponse, GetManagedSshKeyPathParams } from "../types/GetManagedSshKey.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getGetManagedSshKeyUrl(apiVersion: GetManagedSshKeyPathParams["apiVersion"]) {
   const res = { method: 'GET', url: `/${apiVersion}/managed/credentials/sshkey` as const }  

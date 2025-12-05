@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PutUserMutationRequest, PutUserMutationResponse, PutUserPathParams } from "../types/PutUser.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPutUserUrl(apiVersion: PutUserPathParams["apiVersion"], username: PutUserPathParams["username"]) {
   const res = { method: 'PUT', url: `/${apiVersion}/account/users/${username}` as const }  

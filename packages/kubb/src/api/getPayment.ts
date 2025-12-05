@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { GetPaymentQueryResponse, GetPaymentPathParams } from "../types/GetPayment.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getGetPaymentUrl(apiVersion: GetPaymentPathParams["apiVersion"], paymentId: GetPaymentPathParams["paymentId"]) {
   const res = { method: 'GET', url: `/${apiVersion}/account/payments/${paymentId}` as const }  

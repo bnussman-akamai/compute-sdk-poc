@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { GetDatabasesPostgreSqlInstanceCredentialsQueryResponse, GetDatabasesPostgreSqlInstanceCredentialsPathParams } from "../types/GetDatabasesPostgreSqlInstanceCredentials.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getGetDatabasesPostgreSqlInstanceCredentialsUrl(apiVersion: GetDatabasesPostgreSqlInstanceCredentialsPathParams["apiVersion"], instanceId: GetDatabasesPostgreSqlInstanceCredentialsPathParams["instanceId"]) {
   const res = { method: 'GET', url: `/${apiVersion}/databases/postgresql/instances/${instanceId}/credentials` as const }  

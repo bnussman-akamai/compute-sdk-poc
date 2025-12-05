@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PostDatabasesPostgreSqlInstancePatchMutationResponse, PostDatabasesPostgreSqlInstancePatchPathParams } from "../types/PostDatabasesPostgreSqlInstancePatch.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPostDatabasesPostgreSqlInstancePatchUrl(apiVersion: PostDatabasesPostgreSqlInstancePatchPathParams["apiVersion"], instanceId: PostDatabasesPostgreSqlInstancePatchPathParams["instanceId"]) {
   const res = { method: 'POST', url: `/${apiVersion}/databases/postgresql/instances/${instanceId}/patch` as const }  

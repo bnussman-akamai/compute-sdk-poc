@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { GetLkeClusterDashboardQueryResponse, GetLkeClusterDashboardPathParams } from "../types/GetLkeClusterDashboard.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getGetLkeClusterDashboardUrl(apiVersion: GetLkeClusterDashboardPathParams["apiVersion"], clusterId: GetLkeClusterDashboardPathParams["clusterId"]) {
   const res = { method: 'GET', url: `/${apiVersion}/lke/clusters/${clusterId}/dashboard` as const }  

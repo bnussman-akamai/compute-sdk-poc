@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { GetFirewallTemplatesQueryResponse, GetFirewallTemplatesPathParams, GetFirewallTemplatesQueryParams } from "../types/GetFirewallTemplates.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getGetFirewallTemplatesUrl(apiVersion: GetFirewallTemplatesPathParams["apiVersion"]) {
   const res = { method: 'GET', url: `/${apiVersion}/networking/firewalls/templates` as const }  

@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PutAccountSettingsMutationRequest, PutAccountSettingsMutationResponse, PutAccountSettingsPathParams } from "../types/PutAccountSettings.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPutAccountSettingsUrl(apiVersion: PutAccountSettingsPathParams["apiVersion"]) {
   const res = { method: 'PUT', url: `/${apiVersion}/account/settings` as const }  

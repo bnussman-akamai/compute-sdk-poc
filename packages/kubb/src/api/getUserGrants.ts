@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { GetUserGrantsQueryResponse, GetUserGrantsPathParams } from "../types/GetUserGrants.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getGetUserGrantsUrl(apiVersion: GetUserGrantsPathParams["apiVersion"], username: GetUserGrantsPathParams["username"]) {
   const res = { method: 'GET', url: `/${apiVersion}/account/users/${username}/grants` as const }  

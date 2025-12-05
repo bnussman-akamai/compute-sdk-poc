@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { SuspendDatabasesPostgreSqlInstanceMutationResponse, SuspendDatabasesPostgreSqlInstancePathParams } from "../types/SuspendDatabasesPostgreSqlInstance.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getSuspendDatabasesPostgreSqlInstanceUrl(apiVersion: SuspendDatabasesPostgreSqlInstancePathParams["apiVersion"], instanceId: SuspendDatabasesPostgreSqlInstancePathParams["instanceId"]) {
   const res = { method: 'POST', url: `/${apiVersion}/databases/postgresql/instances/${instanceId}/suspend` as const }  

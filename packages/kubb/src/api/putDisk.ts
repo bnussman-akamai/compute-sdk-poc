@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PutDiskMutationRequest, PutDiskMutationResponse, PutDiskPathParams } from "../types/PutDisk.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPutDiskUrl(apiVersion: PutDiskPathParams["apiVersion"], linodeId: PutDiskPathParams["linodeId"], diskId: PutDiskPathParams["diskId"]) {
   const res = { method: 'PUT', url: `/${apiVersion}/linode/instances/${linodeId}/disks/${diskId}` as const }  

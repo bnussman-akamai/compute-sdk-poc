@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { GetLinodeInterfacesQueryResponse, GetLinodeInterfacesPathParams } from "../types/GetLinodeInterfaces.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getGetLinodeInterfacesUrl(apiVersion: GetLinodeInterfacesPathParams["apiVersion"], linodeId: GetLinodeInterfacesPathParams["linodeId"]) {
   const res = { method: 'GET', url: `/${apiVersion}/linode/instances/${linodeId}/interfaces` as const }  

@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { DeletePaymentMethodMutationResponse, DeletePaymentMethodPathParams } from "../types/DeletePaymentMethod.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getDeletePaymentMethodUrl(apiVersion: DeletePaymentMethodPathParams["apiVersion"], paymentMethodId: DeletePaymentMethodPathParams["paymentMethodId"]) {
   const res = { method: 'DELETE', url: `/${apiVersion}/account/payment-methods/${paymentMethodId}` as const }  

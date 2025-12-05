@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { GetManagedCredentialQueryResponse, GetManagedCredentialPathParams } from "../types/GetManagedCredential.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getGetManagedCredentialUrl(apiVersion: GetManagedCredentialPathParams["apiVersion"], credentialId: GetManagedCredentialPathParams["credentialId"]) {
   const res = { method: 'GET', url: `/${apiVersion}/managed/credentials/${credentialId}` as const }  

@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PostDatabasesMysqlInstanceCredentialsResetMutationResponse, PostDatabasesMysqlInstanceCredentialsResetPathParams } from "../types/PostDatabasesMysqlInstanceCredentialsReset.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPostDatabasesMysqlInstanceCredentialsResetUrl(apiVersion: PostDatabasesMysqlInstanceCredentialsResetPathParams["apiVersion"], instanceId: PostDatabasesMysqlInstanceCredentialsResetPathParams["instanceId"]) {
   const res = { method: 'POST', url: `/${apiVersion}/databases/mysql/instances/${instanceId}/credentials/reset` as const }  

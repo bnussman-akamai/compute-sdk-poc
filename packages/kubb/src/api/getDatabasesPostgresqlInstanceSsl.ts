@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { GetDatabasesPostgresqlInstanceSslQueryResponse, GetDatabasesPostgresqlInstanceSslPathParams } from "../types/GetDatabasesPostgresqlInstanceSsl.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getGetDatabasesPostgresqlInstanceSslUrl(apiVersion: GetDatabasesPostgresqlInstanceSslPathParams["apiVersion"], instanceId: GetDatabasesPostgresqlInstanceSslPathParams["instanceId"]) {
   const res = { method: 'GET', url: `/${apiVersion}/databases/postgresql/instances/${instanceId}/ssl` as const }  

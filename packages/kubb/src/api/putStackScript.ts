@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PutStackScriptMutationRequest, PutStackScriptMutationResponse, PutStackScriptPathParams } from "../types/PutStackScript.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPutStackScriptUrl(apiVersion: PutStackScriptPathParams["apiVersion"], stackscriptId: PutStackScriptPathParams["stackscriptId"]) {
   const res = { method: 'PUT', url: `/${apiVersion}/linode/stackscripts/${stackscriptId}` as const }  

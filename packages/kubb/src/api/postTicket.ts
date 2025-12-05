@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PostTicketMutationRequest, PostTicketMutationResponse, PostTicketPathParams } from "../types/PostTicket.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPostTicketUrl(apiVersion: PostTicketPathParams["apiVersion"]) {
   const res = { method: 'POST', url: `/${apiVersion}/support/tickets` as const }  

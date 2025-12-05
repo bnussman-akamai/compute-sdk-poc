@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PutObjectStorageKeyMutationRequest, PutObjectStorageKeyMutationResponse, PutObjectStorageKeyPathParams } from "../types/PutObjectStorageKey.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPutObjectStorageKeyUrl(apiVersion: PutObjectStorageKeyPathParams["apiVersion"], keyId: PutObjectStorageKeyPathParams["keyId"]) {
   const res = { method: 'PUT', url: `/${apiVersion}/object-storage/keys/${keyId}` as const }  

@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { GetTagsQueryResponse, GetTagsPathParams, GetTagsQueryParams } from "../types/GetTags.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getGetTagsUrl(apiVersion: GetTagsPathParams["apiVersion"]) {
   const res = { method: 'GET', url: `/${apiVersion}/tags` as const }  

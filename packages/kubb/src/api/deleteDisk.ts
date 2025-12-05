@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { DeleteDiskMutationResponse, DeleteDiskPathParams } from "../types/DeleteDisk.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getDeleteDiskUrl(apiVersion: DeleteDiskPathParams["apiVersion"], linodeId: DeleteDiskPathParams["linodeId"], diskId: DeleteDiskPathParams["diskId"]) {
   const res = { method: 'DELETE', url: `/${apiVersion}/linode/instances/${linodeId}/disks/${diskId}` as const }  

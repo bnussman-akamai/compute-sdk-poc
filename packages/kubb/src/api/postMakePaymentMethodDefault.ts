@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PostMakePaymentMethodDefaultMutationResponse, PostMakePaymentMethodDefaultPathParams } from "../types/PostMakePaymentMethodDefault.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPostMakePaymentMethodDefaultUrl(apiVersion: PostMakePaymentMethodDefaultPathParams["apiVersion"], paymentMethodId: PostMakePaymentMethodDefaultPathParams["paymentMethodId"]) {
   const res = { method: 'POST', url: `/${apiVersion}/account/payment-methods/${paymentMethodId}/make-default` as const }  

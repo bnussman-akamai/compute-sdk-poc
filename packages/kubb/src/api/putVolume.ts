@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PutVolumeMutationRequest, PutVolumeMutationResponse, PutVolumePathParams } from "../types/PutVolume.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPutVolumeUrl(apiVersion: PutVolumePathParams["apiVersion"], volumeId: PutVolumePathParams["volumeId"]) {
   const res = { method: 'PUT', url: `/${apiVersion}/volumes/${volumeId}` as const }  

@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PostShareIpsMutationRequest, PostShareIpsMutationResponse, PostShareIpsPathParams } from "../types/PostShareIps.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPostShareIpsUrl(apiVersion: PostShareIpsPathParams["apiVersion"]) {
   const res = { method: 'POST', url: `/${apiVersion}/networking/ips/share` as const }  

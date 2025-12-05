@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PostDatabasesPostgreSqlInstanceCredentialsResetMutationResponse, PostDatabasesPostgreSqlInstanceCredentialsResetPathParams } from "../types/PostDatabasesPostgreSqlInstanceCredentialsReset.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPostDatabasesPostgreSqlInstanceCredentialsResetUrl(apiVersion: PostDatabasesPostgreSqlInstanceCredentialsResetPathParams["apiVersion"], instanceId: PostDatabasesPostgreSqlInstanceCredentialsResetPathParams["instanceId"]) {
   const res = { method: 'POST', url: `/${apiVersion}/databases/postgresql/instances/${instanceId}/credentials/reset` as const }  

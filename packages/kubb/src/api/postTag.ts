@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PostTagMutationRequest, PostTagMutationResponse, PostTagPathParams } from "../types/PostTag.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPostTagUrl(apiVersion: PostTagPathParams["apiVersion"]) {
   const res = { method: 'POST', url: `/${apiVersion}/tags` as const }  

@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { GetManagedIssueQueryResponse, GetManagedIssuePathParams } from "../types/GetManagedIssue.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getGetManagedIssueUrl(apiVersion: GetManagedIssuePathParams["apiVersion"], issueId: GetManagedIssuePathParams["issueId"]) {
   const res = { method: 'GET', url: `/${apiVersion}/managed/issues/${issueId}` as const }  

@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PostIpv6RangeMutationRequest, PostIpv6RangeMutationResponse, PostIpv6RangePathParams } from "../types/PostIpv6Range.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPostIpv6RangeUrl(apiVersion: PostIpv6RangePathParams["apiVersion"]) {
   const res = { method: 'POST', url: `/${apiVersion}/networking/ipv6/ranges` as const }  

@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PutDomainMutationRequest, PutDomainMutationResponse, PutDomainPathParams } from "../types/PutDomain.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPutDomainUrl(apiVersion: PutDomainPathParams["apiVersion"], domainId: PutDomainPathParams["domainId"]) {
   const res = { method: 'PUT', url: `/${apiVersion}/domains/${domainId}` as const }  

@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PutUserPreferencesMutationRequest, PutUserPreferencesMutationResponse, PutUserPreferencesPathParams } from "../types/PutUserPreferences.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPutUserPreferencesUrl(apiVersion: PutUserPreferencesPathParams["apiVersion"]) {
   const res = { method: 'PUT', url: `/${apiVersion}/profile/preferences` as const }  

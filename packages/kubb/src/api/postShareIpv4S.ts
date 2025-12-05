@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PostShareIpv4SMutationRequest, PostShareIpv4SMutationResponse, PostShareIpv4SPathParams } from "../types/PostShareIpv4S.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPostShareIpv4SUrl(apiVersion: PostShareIpv4SPathParams["apiVersion"]) {
   const res = { method: 'POST', url: `/${apiVersion}/networking/ipv4/share` as const }  

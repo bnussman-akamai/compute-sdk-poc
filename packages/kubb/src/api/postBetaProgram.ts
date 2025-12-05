@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PostBetaProgramMutationRequest, PostBetaProgramMutationResponse, PostBetaProgramPathParams } from "../types/PostBetaProgram.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPostBetaProgramUrl(apiVersion: PostBetaProgramPathParams["apiVersion"]) {
   const res = { method: 'POST', url: `/${apiVersion}/account/betas` as const }  

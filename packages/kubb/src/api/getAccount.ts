@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { GetAccountQueryResponse, GetAccountPathParams } from "../types/GetAccount.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getGetAccountUrl(apiVersion: GetAccountPathParams["apiVersion"]) {
   const res = { method: 'GET', url: `/${apiVersion}/account` as const }  

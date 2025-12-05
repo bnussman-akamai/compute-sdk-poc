@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { GetVolumeTypesQueryResponse, GetVolumeTypesPathParams } from "../types/GetVolumeTypes.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getGetVolumeTypesUrl(apiVersion: GetVolumeTypesPathParams["apiVersion"]) {
   const res = { method: 'GET', url: `/${apiVersion}/volumes/types` as const }  

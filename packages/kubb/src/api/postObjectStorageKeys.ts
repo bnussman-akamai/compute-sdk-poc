@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PostObjectStorageKeysMutationRequest, PostObjectStorageKeysMutationResponse, PostObjectStorageKeysPathParams } from "../types/PostObjectStorageKeys.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPostObjectStorageKeysUrl(apiVersion: PostObjectStorageKeysPathParams["apiVersion"]) {
   const res = { method: 'POST', url: `/${apiVersion}/object-storage/keys` as const }  

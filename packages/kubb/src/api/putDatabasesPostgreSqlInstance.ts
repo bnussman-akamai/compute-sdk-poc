@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PutDatabasesPostgreSqlInstanceMutationRequest, PutDatabasesPostgreSqlInstanceMutationResponse, PutDatabasesPostgreSqlInstancePathParams } from "../types/PutDatabasesPostgreSqlInstance.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPutDatabasesPostgreSqlInstanceUrl(apiVersion: PutDatabasesPostgreSqlInstancePathParams["apiVersion"], instanceId: PutDatabasesPostgreSqlInstancePathParams["instanceId"]) {
   const res = { method: 'PUT', url: `/${apiVersion}/databases/postgresql/instances/${instanceId}` as const }  

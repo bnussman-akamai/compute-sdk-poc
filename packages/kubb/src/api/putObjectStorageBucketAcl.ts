@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PutObjectStorageBucketAclMutationRequest, PutObjectStorageBucketAclMutationResponse, PutObjectStorageBucketAclPathParams } from "../types/PutObjectStorageBucketAcl.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPutObjectStorageBucketAclUrl(apiVersion: PutObjectStorageBucketAclPathParams["apiVersion"], regionId: PutObjectStorageBucketAclPathParams["regionId"], bucket: PutObjectStorageBucketAclPathParams["bucket"]) {
   const res = { method: 'PUT', url: `/${apiVersion}/object-storage/buckets/${regionId}/${bucket}/object-acl` as const }  

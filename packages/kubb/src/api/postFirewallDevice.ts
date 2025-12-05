@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PostFirewallDeviceMutationRequest, PostFirewallDeviceMutationResponse, PostFirewallDevicePathParams } from "../types/PostFirewallDevice.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPostFirewallDeviceUrl(apiVersion: PostFirewallDevicePathParams["apiVersion"], firewallId: PostFirewallDevicePathParams["firewallId"]) {
   const res = { method: 'POST', url: `/${apiVersion}/networking/firewalls/${firewallId}/devices` as const }  

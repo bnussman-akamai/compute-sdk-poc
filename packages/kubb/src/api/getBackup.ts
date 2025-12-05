@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { GetBackupQueryResponse, GetBackupPathParams } from "../types/GetBackup.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getGetBackupUrl(apiVersion: GetBackupPathParams["apiVersion"], linodeId: GetBackupPathParams["linodeId"], backupId: GetBackupPathParams["backupId"]) {
   const res = { method: 'GET', url: `/${apiVersion}/linode/instances/${linodeId}/backups/${backupId}` as const }  

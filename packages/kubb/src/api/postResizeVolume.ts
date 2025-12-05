@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PostResizeVolumeMutationRequest, PostResizeVolumeMutationResponse, PostResizeVolumePathParams } from "../types/PostResizeVolume.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPostResizeVolumeUrl(apiVersion: PostResizeVolumePathParams["apiVersion"], volumeId: PostResizeVolumePathParams["volumeId"]) {
   const res = { method: 'POST', url: `/${apiVersion}/volumes/${volumeId}/resize` as const }  

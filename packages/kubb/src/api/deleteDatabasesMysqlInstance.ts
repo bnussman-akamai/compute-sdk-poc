@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { DeleteDatabasesMysqlInstanceMutationResponse, DeleteDatabasesMysqlInstancePathParams } from "../types/DeleteDatabasesMysqlInstance.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getDeleteDatabasesMysqlInstanceUrl(apiVersion: DeleteDatabasesMysqlInstancePathParams["apiVersion"], instanceId: DeleteDatabasesMysqlInstancePathParams["instanceId"]) {
   const res = { method: 'DELETE', url: `/${apiVersion}/databases/mysql/instances/${instanceId}` as const }  

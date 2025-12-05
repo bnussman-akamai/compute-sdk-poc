@@ -5,6 +5,18 @@
     "": {
       "name": "compute-sdk-poc",
     },
+    "examples/kubb": {
+      "name": "@akamai/kubb-example",
+      "dependencies": {
+        "@akamai/kubb": "workspace:*",
+      },
+      "devDependencies": {
+        "@types/bun": "latest",
+      },
+      "peerDependencies": {
+        "typescript": "^5",
+      },
+    },
     "packages/kubb": {
       "name": "@akamai/kubb",
       "version": "0.0.1",
@@ -39,6 +51,8 @@
   },
   "packages": {
     "@akamai/kubb": ["@akamai/kubb@workspace:packages/kubb"],
+
+    "@akamai/kubb-example": ["@akamai/kubb-example@workspace:examples/kubb"],
 
     "@akamai/openapi-ts": ["@akamai/openapi-ts@workspace:packages/openapi-ts"],
 

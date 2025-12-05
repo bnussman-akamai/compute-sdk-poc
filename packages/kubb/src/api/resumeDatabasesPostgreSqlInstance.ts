@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { ResumeDatabasesPostgreSqlInstanceMutationResponse, ResumeDatabasesPostgreSqlInstancePathParams } from "../types/ResumeDatabasesPostgreSqlInstance.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getResumeDatabasesPostgreSqlInstanceUrl(apiVersion: ResumeDatabasesPostgreSqlInstancePathParams["apiVersion"], instanceId: ResumeDatabasesPostgreSqlInstancePathParams["instanceId"]) {
   const res = { method: 'POST', url: `/${apiVersion}/databases/postgresql/instances/${instanceId}/resume` as const }  

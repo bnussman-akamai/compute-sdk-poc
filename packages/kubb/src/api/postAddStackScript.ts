@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PostAddStackScriptMutationRequest, PostAddStackScriptMutationResponse, PostAddStackScriptPathParams } from "../types/PostAddStackScript.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPostAddStackScriptUrl(apiVersion: PostAddStackScriptPathParams["apiVersion"]) {
   const res = { method: 'POST', url: `/${apiVersion}/linode/stackscripts` as const }  

@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { GetClientsQueryResponse, GetClientsPathParams, GetClientsQueryParams } from "../types/GetClients.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getGetClientsUrl(apiVersion: GetClientsPathParams["apiVersion"]) {
   const res = { method: 'GET', url: `/${apiVersion}/account/oauth-clients` as const }  

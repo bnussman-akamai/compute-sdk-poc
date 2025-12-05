@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { GetLinodeInterfaceFirewallsQueryResponse, GetLinodeInterfaceFirewallsPathParams } from "../types/GetLinodeInterfaceFirewalls.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getGetLinodeInterfaceFirewallsUrl(apiVersion: GetLinodeInterfaceFirewallsPathParams["apiVersion"], linodeId: GetLinodeInterfaceFirewallsPathParams["linodeId"], interfaceId: GetLinodeInterfaceFirewallsPathParams["interfaceId"]) {
   const res = { method: 'GET', url: `/${apiVersion}/linode/instances/${linodeId}/interfaces/${interfaceId}/firewalls` as const }  

@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { GetLkeClusterPoolsQueryResponse, GetLkeClusterPoolsPathParams } from "../types/GetLkeClusterPools.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getGetLkeClusterPoolsUrl(apiVersion: GetLkeClusterPoolsPathParams["apiVersion"], clusterId: GetLkeClusterPoolsPathParams["clusterId"]) {
   const res = { method: 'GET', url: `/${apiVersion}/lke/clusters/${clusterId}/pools` as const }  

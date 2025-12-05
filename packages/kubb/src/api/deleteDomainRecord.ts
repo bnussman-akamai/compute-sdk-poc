@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { DeleteDomainRecordMutationResponse, DeleteDomainRecordPathParams } from "../types/DeleteDomainRecord.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getDeleteDomainRecordUrl(apiVersion: DeleteDomainRecordPathParams["apiVersion"], domainId: DeleteDomainRecordPathParams["domainId"], recordId: DeleteDomainRecordPathParams["recordId"]) {
   const res = { method: 'DELETE', url: `/${apiVersion}/domains/${domainId}/records/${recordId}` as const }  

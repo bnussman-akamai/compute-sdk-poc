@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { GetIpQueryResponse, GetIpPathParams } from "../types/GetIp.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getGetIpUrl(apiVersion: GetIpPathParams["apiVersion"], address: GetIpPathParams["address"]) {
   const res = { method: 'GET', url: `/${apiVersion}/networking/ips/${address}` as const }  

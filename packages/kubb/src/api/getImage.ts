@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { GetImageQueryResponse, GetImagePathParams } from "../types/GetImage.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getGetImageUrl(apiVersion: GetImagePathParams["apiVersion"], imageId: GetImagePathParams["imageId"]) {
   const res = { method: 'GET', url: `/${apiVersion}/images/${imageId}` as const }  

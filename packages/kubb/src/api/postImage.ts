@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PostImageMutationRequest, PostImageMutationResponse, PostImagePathParams } from "../types/PostImage.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPostImageUrl(apiVersion: PostImagePathParams["apiVersion"]) {
   const res = { method: 'POST', url: `/${apiVersion}/images` as const }  

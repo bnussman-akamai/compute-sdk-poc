@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PostRebuildLinodeInstanceMutationRequest, PostRebuildLinodeInstanceMutationResponse, PostRebuildLinodeInstancePathParams } from "../types/PostRebuildLinodeInstance.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPostRebuildLinodeInstanceUrl(apiVersion: PostRebuildLinodeInstancePathParams["apiVersion"], linodeId: PostRebuildLinodeInstancePathParams["linodeId"]) {
   const res = { method: 'POST', url: `/${apiVersion}/linode/instances/${linodeId}/rebuild` as const }  

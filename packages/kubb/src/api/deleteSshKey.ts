@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { DeleteSshKeyMutationResponse, DeleteSshKeyPathParams } from "../types/DeleteSshKey.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getDeleteSshKeyUrl(apiVersion: DeleteSshKeyPathParams["apiVersion"], sshKeyId: DeleteSshKeyPathParams["sshKeyId"]) {
   const res = { method: 'DELETE', url: `/${apiVersion}/profile/sshkeys/${sshKeyId}` as const }  

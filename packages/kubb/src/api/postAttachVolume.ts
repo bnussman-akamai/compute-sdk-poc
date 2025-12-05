@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PostAttachVolumeMutationRequest, PostAttachVolumeMutationResponse, PostAttachVolumePathParams } from "../types/PostAttachVolume.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPostAttachVolumeUrl(apiVersion: PostAttachVolumePathParams["apiVersion"], volumeId: PostAttachVolumePathParams["volumeId"]) {
   const res = { method: 'POST', url: `/${apiVersion}/volumes/${volumeId}/attach` as const }  

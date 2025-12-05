@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PostPaymentMutationRequest, PostPaymentMutationResponse, PostPaymentPathParams } from "../types/PostPayment.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPostPaymentUrl(apiVersion: PostPaymentPathParams["apiVersion"]) {
   const res = { method: 'POST', url: `/${apiVersion}/account/payments` as const }  

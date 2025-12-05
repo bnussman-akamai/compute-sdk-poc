@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { DeleteObjectStorageBucketMutationResponse, DeleteObjectStorageBucketPathParams } from "../types/DeleteObjectStorageBucket.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getDeleteObjectStorageBucketUrl(apiVersion: DeleteObjectStorageBucketPathParams["apiVersion"], regionId: DeleteObjectStorageBucketPathParams["regionId"], bucket: DeleteObjectStorageBucketPathParams["bucket"]) {
   const res = { method: 'DELETE', url: `/${apiVersion}/object-storage/buckets/${regionId}/${bucket}` as const }  

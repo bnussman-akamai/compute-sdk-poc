@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { GetDomainsQueryResponse, GetDomainsPathParams, GetDomainsQueryParams } from "../types/GetDomains.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getGetDomainsUrl(apiVersion: GetDomainsPathParams["apiVersion"]) {
   const res = { method: 'GET', url: `/${apiVersion}/domains` as const }  

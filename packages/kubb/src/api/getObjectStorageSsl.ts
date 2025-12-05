@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { GetObjectStorageSslQueryResponse, GetObjectStorageSslPathParams } from "../types/GetObjectStorageSsl.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getGetObjectStorageSslUrl(apiVersion: GetObjectStorageSslPathParams["apiVersion"], regionId: GetObjectStorageSslPathParams["regionId"], bucket: GetObjectStorageSslPathParams["bucket"]) {
   const res = { method: 'GET', url: `/${apiVersion}/object-storage/buckets/${regionId}/${bucket}/ssl` as const }  

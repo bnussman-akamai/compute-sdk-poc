@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PutSshKeyMutationRequest, PutSshKeyMutationResponse, PutSshKeyPathParams } from "../types/PutSshKey.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPutSshKeyUrl(apiVersion: PutSshKeyPathParams["apiVersion"], sshKeyId: PutSshKeyPathParams["sshKeyId"]) {
   const res = { method: 'PUT', url: `/${apiVersion}/profile/sshkeys/${sshKeyId}` as const }  

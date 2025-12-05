@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { GetLinodeDisksQueryResponse, GetLinodeDisksPathParams, GetLinodeDisksQueryParams } from "../types/GetLinodeDisks.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getGetLinodeDisksUrl(apiVersion: GetLinodeDisksPathParams["apiVersion"], linodeId: GetLinodeDisksPathParams["linodeId"]) {
   const res = { method: 'GET', url: `/${apiVersion}/linode/instances/${linodeId}/disks` as const }  

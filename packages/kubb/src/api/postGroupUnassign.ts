@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PostGroupUnassignMutationRequest, PostGroupUnassignMutationResponse, PostGroupUnassignPathParams } from "../types/PostGroupUnassign.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPostGroupUnassignUrl(apiVersion: PostGroupUnassignPathParams["apiVersion"], groupId: PostGroupUnassignPathParams["groupId"]) {
   const res = { method: 'POST', url: `/${apiVersion}/placement/groups/${groupId}/unassign` as const }  

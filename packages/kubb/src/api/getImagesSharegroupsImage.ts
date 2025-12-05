@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { GetImagesSharegroupsImageQueryResponse, GetImagesSharegroupsImagePathParams } from "../types/GetImagesSharegroupsImage.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getGetImagesSharegroupsImageUrl(apiVersion: GetImagesSharegroupsImagePathParams["apiVersion"], imageId: GetImagesSharegroupsImagePathParams["imageId"]) {
   const res = { method: 'GET', url: `/${apiVersion}/images/${imageId}/sharegroups` as const }  

@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PostManagedCredentialUsernamePasswordMutationRequest, PostManagedCredentialUsernamePasswordMutationResponse, PostManagedCredentialUsernamePasswordPathParams } from "../types/PostManagedCredentialUsernamePassword.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPostManagedCredentialUsernamePasswordUrl(apiVersion: PostManagedCredentialUsernamePasswordPathParams["apiVersion"], credentialId: PostManagedCredentialUsernamePasswordPathParams["credentialId"]) {
   const res = { method: 'POST', url: `/${apiVersion}/managed/credentials/${credentialId}/update` as const }  

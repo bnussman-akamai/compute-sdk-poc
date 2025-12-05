@@ -36,8 +36,9 @@ export default defineConfig({
     }),
     pluginClient({
       client: 'fetch',
+      bundle: true,
       output: {
-        path: './api'
+        path: './api',
       },
     }),
     pluginFaker({

@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { GetLongviewSubscriptionQueryResponse, GetLongviewSubscriptionPathParams } from "../types/GetLongviewSubscription.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getGetLongviewSubscriptionUrl(apiVersion: GetLongviewSubscriptionPathParams["apiVersion"], subscriptionId: GetLongviewSubscriptionPathParams["subscriptionId"]) {
   const res = { method: 'GET', url: `/${apiVersion}/longview/subscriptions/${subscriptionId}` as const }  

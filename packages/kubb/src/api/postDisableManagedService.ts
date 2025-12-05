@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PostDisableManagedServiceMutationResponse, PostDisableManagedServicePathParams } from "../types/PostDisableManagedService.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPostDisableManagedServiceUrl(apiVersion: PostDisableManagedServicePathParams["apiVersion"], serviceId: PostDisableManagedServicePathParams["serviceId"]) {
   const res = { method: 'POST', url: `/${apiVersion}/managed/services/${serviceId}/disable` as const }  

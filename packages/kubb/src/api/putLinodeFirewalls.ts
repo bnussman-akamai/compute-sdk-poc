@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PutLinodeFirewallsMutationRequest, PutLinodeFirewallsMutationResponse, PutLinodeFirewallsPathParams, PutLinodeFirewallsQueryParams } from "../types/PutLinodeFirewalls.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPutLinodeFirewallsUrl(apiVersion: PutLinodeFirewallsPathParams["apiVersion"], linodeId: PutLinodeFirewallsPathParams["linodeId"]) {
   const res = { method: 'PUT', url: `/${apiVersion}/linode/instances/${linodeId}/firewalls` as const }  

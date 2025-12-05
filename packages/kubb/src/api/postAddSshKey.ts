@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PostAddSshKeyMutationRequest, PostAddSshKeyMutationResponse, PostAddSshKeyPathParams } from "../types/PostAddSshKey.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPostAddSshKeyUrl(apiVersion: PostAddSshKeyPathParams["apiVersion"]) {
   const res = { method: 'POST', url: `/${apiVersion}/profile/sshkeys` as const }  

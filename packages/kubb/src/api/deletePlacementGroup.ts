@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { DeletePlacementGroupMutationResponse, DeletePlacementGroupPathParams } from "../types/DeletePlacementGroup.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getDeletePlacementGroupUrl(apiVersion: DeletePlacementGroupPathParams["apiVersion"], groupId: DeletePlacementGroupPathParams["groupId"]) {
   const res = { method: 'DELETE', url: `/${apiVersion}/placement/groups/${groupId}` as const }  

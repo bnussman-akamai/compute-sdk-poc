@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { DeleteVpcSubnetMutationResponse, DeleteVpcSubnetPathParams } from "../types/DeleteVpcSubnet.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getDeleteVpcSubnetUrl(apiVersion: DeleteVpcSubnetPathParams["apiVersion"], vpcId: DeleteVpcSubnetPathParams["vpcId"], vpcSubnetId: DeleteVpcSubnetPathParams["vpcSubnetId"]) {
   const res = { method: 'DELETE', url: `/${apiVersion}/vpcs/${vpcId}/subnets/${vpcSubnetId}` as const }  

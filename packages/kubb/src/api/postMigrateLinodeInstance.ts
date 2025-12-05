@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PostMigrateLinodeInstanceMutationRequest, PostMigrateLinodeInstanceMutationResponse, PostMigrateLinodeInstancePathParams } from "../types/PostMigrateLinodeInstance.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPostMigrateLinodeInstanceUrl(apiVersion: PostMigrateLinodeInstancePathParams["apiVersion"], linodeId: PostMigrateLinodeInstancePathParams["linodeId"]) {
   const res = { method: 'POST', url: `/${apiVersion}/linode/instances/${linodeId}/migrate` as const }  

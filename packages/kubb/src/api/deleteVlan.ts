@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { DeleteVlanMutationResponse, DeleteVlanPathParams } from "../types/DeleteVlan.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getDeleteVlanUrl(apiVersion: DeleteVlanPathParams["apiVersion"], label: DeleteVlanPathParams["label"], regionId: DeleteVlanPathParams["regionId"]) {
   const res = { method: 'DELETE', url: `/${apiVersion}/networking/vlans/${regionId}/${label}` as const }  

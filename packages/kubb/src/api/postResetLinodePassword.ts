@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PostResetLinodePasswordMutationRequest, PostResetLinodePasswordMutationResponse, PostResetLinodePasswordPathParams } from "../types/PostResetLinodePassword.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPostResetLinodePasswordUrl(apiVersion: PostResetLinodePasswordPathParams["apiVersion"], linodeId: PostResetLinodePasswordPathParams["linodeId"]) {
   const res = { method: 'POST', url: `/${apiVersion}/linode/instances/${linodeId}/password` as const }  

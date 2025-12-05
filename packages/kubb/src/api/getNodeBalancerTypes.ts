@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { GetNodeBalancerTypesQueryResponse, GetNodeBalancerTypesPathParams } from "../types/GetNodeBalancerTypes.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getGetNodeBalancerTypesUrl(apiVersion: GetNodeBalancerTypesPathParams["apiVersion"]) {
   const res = { method: 'GET', url: `/${apiVersion}/nodebalancers/types` as const }  

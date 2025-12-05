@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { GetObjectStorageBucketinClusterQueryResponse, GetObjectStorageBucketinClusterPathParams } from "../types/GetObjectStorageBucketinCluster.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getGetObjectStorageBucketinClusterUrl(apiVersion: GetObjectStorageBucketinClusterPathParams["apiVersion"], regionId: GetObjectStorageBucketinClusterPathParams["regionId"]) {
   const res = { method: 'GET', url: `/${apiVersion}/object-storage/buckets/${regionId}` as const }  

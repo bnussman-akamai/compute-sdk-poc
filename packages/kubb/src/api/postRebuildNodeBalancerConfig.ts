@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PostRebuildNodeBalancerConfigMutationRequest, PostRebuildNodeBalancerConfigMutationResponse, PostRebuildNodeBalancerConfigPathParams } from "../types/PostRebuildNodeBalancerConfig.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPostRebuildNodeBalancerConfigUrl(apiVersion: PostRebuildNodeBalancerConfigPathParams["apiVersion"], nodeBalancerId: PostRebuildNodeBalancerConfigPathParams["nodeBalancerId"], configId: PostRebuildNodeBalancerConfigPathParams["configId"]) {
   const res = { method: 'POST', url: `/${apiVersion}/nodebalancers/${nodeBalancerId}/configs/${configId}/rebuild` as const }  

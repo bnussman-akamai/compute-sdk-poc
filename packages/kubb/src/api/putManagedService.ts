@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PutManagedServiceMutationRequest, PutManagedServiceMutationResponse, PutManagedServicePathParams } from "../types/PutManagedService.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPutManagedServiceUrl(apiVersion: PutManagedServicePathParams["apiVersion"], serviceId: PutManagedServicePathParams["serviceId"]) {
   const res = { method: 'PUT', url: `/${apiVersion}/managed/services/${serviceId}` as const }  

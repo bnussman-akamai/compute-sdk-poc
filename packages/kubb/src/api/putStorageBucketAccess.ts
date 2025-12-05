@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PutStorageBucketAccessMutationRequest, PutStorageBucketAccessMutationResponse, PutStorageBucketAccessPathParams } from "../types/PutStorageBucketAccess.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPutStorageBucketAccessUrl(apiVersion: PutStorageBucketAccessPathParams["apiVersion"], regionId: PutStorageBucketAccessPathParams["regionId"], bucket: PutStorageBucketAccessPathParams["bucket"]) {
   const res = { method: 'PUT', url: `/${apiVersion}/object-storage/buckets/${regionId}/${bucket}/access` as const }  

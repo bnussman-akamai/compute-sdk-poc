@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { DeleteLongviewClientMutationResponse, DeleteLongviewClientPathParams } from "../types/DeleteLongviewClient.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getDeleteLongviewClientUrl(apiVersion: DeleteLongviewClientPathParams["apiVersion"], clientId: DeleteLongviewClientPathParams["clientId"]) {
   const res = { method: 'DELETE', url: `/${apiVersion}/longview/clients/${clientId}` as const }  

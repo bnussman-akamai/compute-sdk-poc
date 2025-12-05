@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { GetLinodeTypeQueryResponse, GetLinodeTypePathParams } from "../types/GetLinodeType.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getGetLinodeTypeUrl(apiVersion: GetLinodeTypePathParams["apiVersion"], typeId: GetLinodeTypePathParams["typeId"]) {
   const res = { method: 'GET', url: `/${apiVersion}/linode/types/${typeId}` as const }  

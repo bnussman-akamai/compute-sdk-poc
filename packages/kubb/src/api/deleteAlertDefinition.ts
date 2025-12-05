@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { DeleteAlertDefinitionMutationResponse, DeleteAlertDefinitionPathParams } from "../types/DeleteAlertDefinition.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getDeleteAlertDefinitionUrl(apiVersion: DeleteAlertDefinitionPathParams["apiVersion"], serviceType: DeleteAlertDefinitionPathParams["serviceType"], alertId: DeleteAlertDefinitionPathParams["alertId"]) {
   const res = { method: 'DELETE', url: `/${apiVersion}/monitor/services/${serviceType}/alert-definitions/${alertId}` as const }  

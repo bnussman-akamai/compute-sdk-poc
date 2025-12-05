@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { DeleteObjectStorageSslMutationResponse, DeleteObjectStorageSslPathParams } from "../types/DeleteObjectStorageSsl.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getDeleteObjectStorageSslUrl(apiVersion: DeleteObjectStorageSslPathParams["apiVersion"], regionId: DeleteObjectStorageSslPathParams["regionId"], bucket: DeleteObjectStorageSslPathParams["bucket"]) {
   const res = { method: 'DELETE', url: `/${apiVersion}/object-storage/buckets/${regionId}/${bucket}/ssl` as const }  

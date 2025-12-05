@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PostVpcSubnetMutationRequest, PostVpcSubnetMutationResponse, PostVpcSubnetPathParams } from "../types/PostVpcSubnet.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPostVpcSubnetUrl(apiVersion: PostVpcSubnetPathParams["apiVersion"], vpcId: PostVpcSubnetPathParams["vpcId"]) {
   const res = { method: 'POST', url: `/${apiVersion}/vpcs/${vpcId}/subnets` as const }  

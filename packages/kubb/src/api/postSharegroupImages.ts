@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PostSharegroupImagesMutationRequest, PostSharegroupImagesMutationResponse, PostSharegroupImagesPathParams } from "../types/PostSharegroupImages.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPostSharegroupImagesUrl(apiVersion: PostSharegroupImagesPathParams["apiVersion"], sharegroupId: PostSharegroupImagesPathParams["sharegroupId"]) {
   const res = { method: 'POST', url: `/${apiVersion}/images/sharegroups/${sharegroupId}/images` as const }  

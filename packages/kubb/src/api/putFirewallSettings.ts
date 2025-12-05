@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PutFirewallSettingsMutationRequest, PutFirewallSettingsMutationResponse, PutFirewallSettingsPathParams } from "../types/PutFirewallSettings.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPutFirewallSettingsUrl(apiVersion: PutFirewallSettingsPathParams["apiVersion"]) {
   const res = { method: 'PUT', url: `/${apiVersion}/networking/firewalls/settings` as const }  

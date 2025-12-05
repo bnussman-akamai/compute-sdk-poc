@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PostPromoCreditMutationRequest, PostPromoCreditMutationResponse, PostPromoCreditPathParams } from "../types/PostPromoCredit.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPostPromoCreditUrl(apiVersion: PostPromoCreditPathParams["apiVersion"]) {
   const res = { method: 'POST', url: `/${apiVersion}/account/promo-codes` as const }  

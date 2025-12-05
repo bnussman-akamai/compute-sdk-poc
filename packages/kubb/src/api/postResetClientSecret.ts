@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PostResetClientSecretMutationResponse, PostResetClientSecretPathParams } from "../types/PostResetClientSecret.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPostResetClientSecretUrl(apiVersion: PostResetClientSecretPathParams["apiVersion"], clientId: PostResetClientSecretPathParams["clientId"]) {
   const res = { method: 'POST', url: `/${apiVersion}/account/oauth-clients/${clientId}/reset-secret` as const }  

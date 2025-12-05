@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { DeleteProfileAppMutationResponse, DeleteProfileAppPathParams } from "../types/DeleteProfileApp.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getDeleteProfileAppUrl(apiVersion: DeleteProfileAppPathParams["apiVersion"], appId: DeleteProfileAppPathParams["appId"]) {
   const res = { method: 'DELETE', url: `/${apiVersion}/profile/apps/${appId}` as const }  

@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PostAssignIpsMutationRequest, PostAssignIpsMutationResponse, PostAssignIpsPathParams } from "../types/PostAssignIps.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPostAssignIpsUrl(apiVersion: PostAssignIpsPathParams["apiVersion"]) {
   const res = { method: 'POST', url: `/${apiVersion}/networking/ips/assign` as const }  

@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { GetSharegroupImagesByTokenQueryResponse, GetSharegroupImagesByTokenPathParams } from "../types/GetSharegroupImagesByToken.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getGetSharegroupImagesByTokenUrl(apiVersion: GetSharegroupImagesByTokenPathParams["apiVersion"], tokenUuid: GetSharegroupImagesByTokenPathParams["tokenUuid"]) {
   const res = { method: 'GET', url: `/${apiVersion}/images/sharegroups/tokens/${tokenUuid}/sharegroup/images` as const }  

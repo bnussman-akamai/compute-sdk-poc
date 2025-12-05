@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { DeleteLkeClusterAclMutationResponse, DeleteLkeClusterAclPathParams, DeleteLkeClusterAcl400, DeleteLkeClusterAcl404 } from "../types/DeleteLkeClusterAcl.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getDeleteLkeClusterAclUrl(apiVersion: DeleteLkeClusterAclPathParams["apiVersion"], clusterId: DeleteLkeClusterAclPathParams["clusterId"]) {
   const res = { method: 'DELETE', url: `/${apiVersion}/lke/clusters/${clusterId}/control_plane_acl` as const }  

@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { GetMonitorInformationQueryResponse, GetMonitorInformationPathParams, GetMonitorInformationHeaderParams } from "../types/GetMonitorInformation.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getGetMonitorInformationUrl(apiVersion: GetMonitorInformationPathParams["apiVersion"], serviceType: GetMonitorInformationPathParams["serviceType"]) {
   const res = { method: 'GET', url: `/${apiVersion}/monitor/services/${serviceType}/metric-definitions` as const }  

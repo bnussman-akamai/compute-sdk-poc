@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PostGetTokenMutationRequest, PostGetTokenMutationResponse, PostGetTokenPathParams } from "../types/PostGetToken.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPostGetTokenUrl(apiVersion: PostGetTokenPathParams["apiVersion"], serviceType: PostGetTokenPathParams["serviceType"]) {
   const res = { method: 'POST', url: `/${apiVersion}/monitor/services/${serviceType}/token` as const }  

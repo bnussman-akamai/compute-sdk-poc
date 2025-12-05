@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { DeleteLkeClusterMutationResponse, DeleteLkeClusterPathParams } from "../types/DeleteLkeCluster.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getDeleteLkeClusterUrl(apiVersion: DeleteLkeClusterPathParams["apiVersion"], clusterId: DeleteLkeClusterPathParams["clusterId"]) {
   const res = { method: 'DELETE', url: `/${apiVersion}/lke/clusters/${clusterId}` as const }  

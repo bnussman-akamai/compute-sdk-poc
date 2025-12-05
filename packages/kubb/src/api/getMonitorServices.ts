@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { GetMonitorServicesQueryResponse, GetMonitorServicesPathParams } from "../types/GetMonitorServices.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getGetMonitorServicesUrl(apiVersion: GetMonitorServicesPathParams["apiVersion"]) {
   const res = { method: 'GET', url: `/${apiVersion}/monitor/services` as const }  

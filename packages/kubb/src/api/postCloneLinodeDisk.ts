@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PostCloneLinodeDiskMutationResponse, PostCloneLinodeDiskPathParams } from "../types/PostCloneLinodeDisk.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPostCloneLinodeDiskUrl(apiVersion: PostCloneLinodeDiskPathParams["apiVersion"], linodeId: PostCloneLinodeDiskPathParams["linodeId"], diskId: PostCloneLinodeDiskPathParams["diskId"]) {
   const res = { method: 'POST', url: `/${apiVersion}/linode/instances/${linodeId}/disks/${diskId}/clone` as const }  

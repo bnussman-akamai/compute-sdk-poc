@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { GetRegionsAvailabilityQueryResponse, GetRegionsAvailabilityPathParams } from "../types/GetRegionsAvailability.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getGetRegionsAvailabilityUrl(apiVersion: GetRegionsAvailabilityPathParams["apiVersion"]) {
   const res = { method: 'GET', url: `/${apiVersion}/regions/availability` as const }  

@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PostAcceptEntityTransferMutationResponse, PostAcceptEntityTransferPathParams } from "../types/PostAcceptEntityTransfer.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPostAcceptEntityTransferUrl(apiVersion: PostAcceptEntityTransferPathParams["apiVersion"], token: PostAcceptEntityTransferPathParams["token"]) {
   const res = { method: 'POST', url: `/${apiVersion}/account/entity-transfers/${token}/accept` as const }  

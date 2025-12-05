@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { DeleteLinodeConfigMutationResponse, DeleteLinodeConfigPathParams } from "../types/DeleteLinodeConfig.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getDeleteLinodeConfigUrl(apiVersion: DeleteLinodeConfigPathParams["apiVersion"], linodeId: DeleteLinodeConfigPathParams["linodeId"], configId: DeleteLinodeConfigPathParams["configId"]) {
   const res = { method: 'DELETE', url: `/${apiVersion}/linode/instances/${linodeId}/configs/${configId}` as const }  

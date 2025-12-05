@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PostLkeClusterRegenerateMutationRequest, PostLkeClusterRegenerateMutationResponse, PostLkeClusterRegeneratePathParams } from "../types/PostLkeClusterRegenerate.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPostLkeClusterRegenerateUrl(apiVersion: PostLkeClusterRegeneratePathParams["apiVersion"], clusterId: PostLkeClusterRegeneratePathParams["clusterId"]) {
   const res = { method: 'POST', url: `/${apiVersion}/lke/clusters/${clusterId}/regenerate` as const }  

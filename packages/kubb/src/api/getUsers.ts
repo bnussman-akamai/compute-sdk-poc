@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { GetUsersQueryResponse, GetUsersPathParams, GetUsersQueryParams } from "../types/GetUsers.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getGetUsersUrl(apiVersion: GetUsersPathParams["apiVersion"]) {
   const res = { method: 'GET', url: `/${apiVersion}/account/users` as const }  

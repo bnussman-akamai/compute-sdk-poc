@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PostChildAccountTokenMutationResponse, PostChildAccountTokenPathParams } from "../types/PostChildAccountToken.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPostChildAccountTokenUrl(apiVersion: PostChildAccountTokenPathParams["apiVersion"], euuId: PostChildAccountTokenPathParams["euuId"]) {
   const res = { method: 'POST', url: `/${apiVersion}/account/child-accounts/${euuId}/token` as const }  

@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PostResizeDiskMutationRequest, PostResizeDiskMutationResponse, PostResizeDiskPathParams } from "../types/PostResizeDisk.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPostResizeDiskUrl(apiVersion: PostResizeDiskPathParams["apiVersion"], linodeId: PostResizeDiskPathParams["linodeId"], diskId: PostResizeDiskPathParams["diskId"]) {
   const res = { method: 'POST', url: `/${apiVersion}/linode/instances/${linodeId}/disks/${diskId}/resize` as const }  

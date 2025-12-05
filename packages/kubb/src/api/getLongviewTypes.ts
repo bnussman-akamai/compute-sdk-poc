@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { GetLongviewTypesQueryResponse, GetLongviewTypesPathParams } from "../types/GetLongviewTypes.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getGetLongviewTypesUrl(apiVersion: GetLongviewTypesPathParams["apiVersion"]) {
   const res = { method: 'GET', url: `/${apiVersion}/longview/types` as const }  

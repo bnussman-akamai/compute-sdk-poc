@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { GetLinodeConfigInterfaceQueryResponse, GetLinodeConfigInterfacePathParams } from "../types/GetLinodeConfigInterface.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getGetLinodeConfigInterfaceUrl(apiVersion: GetLinodeConfigInterfacePathParams["apiVersion"], linodeId: GetLinodeConfigInterfacePathParams["linodeId"], configId: GetLinodeConfigInterfacePathParams["configId"], interfaceId: GetLinodeConfigInterfacePathParams["interfaceId"]) {
   const res = { method: 'GET', url: `/${apiVersion}/linode/instances/${linodeId}/configs/${configId}/interfaces/${interfaceId}` as const }  

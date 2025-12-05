@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PutPersonalAccessTokenMutationRequest, PutPersonalAccessTokenMutationResponse, PutPersonalAccessTokenPathParams } from "../types/PutPersonalAccessToken.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPutPersonalAccessTokenUrl(apiVersion: PutPersonalAccessTokenPathParams["apiVersion"], tokenId: PutPersonalAccessTokenPathParams["tokenId"]) {
   const res = { method: 'PUT', url: `/${apiVersion}/profile/tokens/${tokenId}` as const }  

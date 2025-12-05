@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PostManagedCredentialRevokeMutationResponse, PostManagedCredentialRevokePathParams } from "../types/PostManagedCredentialRevoke.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPostManagedCredentialRevokeUrl(apiVersion: PostManagedCredentialRevokePathParams["apiVersion"], credentialId: PostManagedCredentialRevokePathParams["credentialId"]) {
   const res = { method: 'POST', url: `/${apiVersion}/managed/credentials/${credentialId}/revoke` as const }  

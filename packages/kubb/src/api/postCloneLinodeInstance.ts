@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PostCloneLinodeInstanceMutationRequest, PostCloneLinodeInstanceMutationResponse, PostCloneLinodeInstancePathParams } from "../types/PostCloneLinodeInstance.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPostCloneLinodeInstanceUrl(apiVersion: PostCloneLinodeInstancePathParams["apiVersion"], linodeId: PostCloneLinodeInstancePathParams["linodeId"]) {
   const res = { method: 'POST', url: `/${apiVersion}/linode/instances/${linodeId}/clone` as const }  

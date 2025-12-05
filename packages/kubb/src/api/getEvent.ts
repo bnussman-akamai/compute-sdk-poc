@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { GetEventQueryResponse, GetEventPathParams } from "../types/GetEvent.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getGetEventUrl(apiVersion: GetEventPathParams["apiVersion"], eventId: GetEventPathParams["eventId"]) {
   const res = { method: 'GET', url: `/${apiVersion}/account/events/${eventId}` as const }  

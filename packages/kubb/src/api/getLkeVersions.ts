@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { GetLkeVersionsQueryResponse, GetLkeVersionsPathParams } from "../types/GetLkeVersions.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getGetLkeVersionsUrl(apiVersion: GetLkeVersionsPathParams["apiVersion"]) {
   const res = { method: 'GET', url: `/${apiVersion}/lke/versions` as const }  

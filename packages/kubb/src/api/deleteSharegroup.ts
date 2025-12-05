@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { DeleteSharegroupMutationResponse, DeleteSharegroupPathParams } from "../types/DeleteSharegroup.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getDeleteSharegroupUrl(apiVersion: DeleteSharegroupPathParams["apiVersion"], sharegroupId: DeleteSharegroupPathParams["sharegroupId"]) {
   const res = { method: 'DELETE', url: `/${apiVersion}/images/sharegroups/${sharegroupId}` as const }  

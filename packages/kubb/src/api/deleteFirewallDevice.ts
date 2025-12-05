@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { DeleteFirewallDeviceMutationResponse, DeleteFirewallDevicePathParams } from "../types/DeleteFirewallDevice.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getDeleteFirewallDeviceUrl(apiVersion: DeleteFirewallDevicePathParams["apiVersion"], firewallId: DeleteFirewallDevicePathParams["firewallId"], deviceId: DeleteFirewallDevicePathParams["deviceId"]) {
   const res = { method: 'DELETE', url: `/${apiVersion}/networking/firewalls/${firewallId}/devices/${deviceId}` as const }  

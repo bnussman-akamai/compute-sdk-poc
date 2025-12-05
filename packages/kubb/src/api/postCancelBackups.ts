@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PostCancelBackupsMutationResponse, PostCancelBackupsPathParams } from "../types/PostCancelBackups.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPostCancelBackupsUrl(apiVersion: PostCancelBackupsPathParams["apiVersion"], linodeId: PostCancelBackupsPathParams["linodeId"]) {
   const res = { method: 'POST', url: `/${apiVersion}/linode/instances/${linodeId}/backups/cancel` as const }  

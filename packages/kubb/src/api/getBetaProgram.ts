@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { GetBetaProgramQueryResponse, GetBetaProgramPathParams } from "../types/GetBetaProgram.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getGetBetaProgramUrl(apiVersion: GetBetaProgramPathParams["apiVersion"], betaId: GetBetaProgramPathParams["betaId"]) {
   const res = { method: 'GET', url: `/${apiVersion}/betas/${betaId}` as const }  

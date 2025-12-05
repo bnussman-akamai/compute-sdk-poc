@@ -3,9 +3,9 @@
 * Do not edit manually.
 */
 
-import fetch from "@kubb/plugin-client/clients/fetch";
+import type { RequestConfig, ResponseErrorConfig } from "../.kubb/fetch.ts";
 import type { PutVpcMutationRequest, PutVpcMutationResponse, PutVpcPathParams } from "../types/PutVpc.ts";
-import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
+import { fetch } from "../.kubb/fetch.ts";
 
 function getPutVpcUrl(apiVersion: PutVpcPathParams["apiVersion"], vpcId: PutVpcPathParams["vpcId"]) {
   const res = { method: 'PUT', url: `/${apiVersion}/vpcs/${vpcId}` as const }  
