@@ -2,6 +2,7 @@ import { describe, expect, expectTypeOf, test } from "vitest";
 import { getLinodeInstance, postLinodeInstance } from "../src";
 import { http, HttpResponse } from 'msw'
 import { server } from "./msw";
+import { postLinodeInstanceRequestSchema } from "../src/zod.gen";
 
 describe("TypeScript types", () => {
   test("payload for creating a Linode", () => {
@@ -27,5 +28,33 @@ describe("TypeScript types", () => {
 
     expect(linode).toStrictEqual(mockLinode);
     expectTypeOf(linode).toExtend<{ id: number, label: string }>();
+  });
+});
+
+
+// @todo the schema is not correct ☹️
+// fields that should not be required *are* required in the Zod schemas. Need to find a fix for this.
+describe("Validation Schemas", () => {
+  test.fails("should not throw if all required params as passed", () => {
+    const payload = { region: 'us-east', type: 'g6-standard-1' };
+
+    expect(postLinodeInstanceRequestSchema.shape.body.parse(payload)).not.toThrow();
+  });
+
+  test.fails("should throw if required params are missing", () => {
+    const payload = { type: 'g6-standard-1' };
+
+    const { error } = postLinodeInstanceRequestSchema.shape.body.safeParse(payload);
+
+    expect(error).toBeDefined();
+
+    const regionFieldError = error?.issues.find(issue => issue.path[0] === 'region');
+
+    expect(regionFieldError).toBeDefined();
+
+    expect(regionFieldError?.message).toBe('Invalid input: expected string, received undefined');
+
+    // Region is the only other required field
+    expect(error?.issues).toHaveLength(1);
   });
 });
