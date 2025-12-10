@@ -32820,7 +32820,7 @@ export type PutLinodeInterfaceData = {
                      * - The prefix of /64 or /56 block of IPv6 addresses.
                      * - CIDR notation ranges must be within your assigned ranges.
                      */
-                    range: string;
+                    range: string | null;
                 }>;
             };
         } | null;
@@ -32879,7 +32879,7 @@ export type PutLinodeInterfaceData = {
                      *
                      * - Omitting this or setting it to `null` results in no 1:1 NAT configuration for the VPC interface.
                      */
-                    nat_1_1_address?: string;
+                    nat_1_1_address?: string | null;
                     /**
                      * The IPv4 primary address for the interface that sets up a source address for routes inside the Linode for the corresponding network interface.
                      * Automatically sets to `true` and should not be set to `false` if there is only one address present in the `addresses` array.

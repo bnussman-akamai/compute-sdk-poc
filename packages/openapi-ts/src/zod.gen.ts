@@ -12939,7 +12939,10 @@ export const putLinodeInterfaceRequestSchema = z.object({
                     })),
                     ipv6: z.optional(z.object({
                         ranges: z.optional(z.array(z.object({
-                            range: z.string().default(null)
+                            range: z.union([
+                                z.string(),
+                                z.null()
+                            ]).default(null)
                         })))
                     }))
                 }),
@@ -12967,7 +12970,10 @@ export const putLinodeInterfaceRequestSchema = z.object({
                     ipv4: z.optional(z.object({
                         addresses: z.optional(z.array(z.object({
                             address: z.string().default('auto'),
-                            nat_1_1_address: z.optional(z.string()).default(null),
+                            nat_1_1_address: z.optional(z.union([
+                                z.string(),
+                                z.null()
+                            ])).default(null),
                             primary: z.optional(z.union([
                                 z.boolean(),
                                 z.null()
