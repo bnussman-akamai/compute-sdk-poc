@@ -1,1 +1,51 @@
-# Repo for comparing tooling that generates TypeScript SDKs from OpenAPI specifications
+# Comparing tooling that generates TypeScript SDKs from OpenAPI specifications
+
+This repo contains different attempts for generating TypeScript SDKs from the [Linode OpenAPI spesification](https://github.com/linode/linode-api-docs/blob/development/openapi.json) using different tools.
+
+Each folder in the `packages` directory represents a different tool being used to generate a TypeScript SDK.
+The `examples` directory is just used a manual playground for testing the generated SDKs.
+
+## Tools I Tried
+
+### [Hey API](https://heyapi.dev/)
+
+You can see API reference docs for this generated SDK [here](https://bnussman-akamai.github.io/compute-sdk-poc/)!
+
+#### Pros
+- Generated mostly valid code (5 errors in 2 files according to TypeScript) without any patches to the OpenAPI spec
+  - I got it down to 0 errors by patching the OpenAPI spec
+- Has good defaults
+- Easy to configure
+
+#### Cons
+- Does not support generating mock data like Kubb yet
+  - Claims to be coming soon https://github.com/hey-api/openapi-ts/issues/1485 
+
+### [Kubb](https://kubb.dev/)
+
+#### Pros
+- More plugins in general
+- Supports mock data tools like Faker which could be very useful for us
+
+#### Cons
+- Generated lots of invalid code (115 errors in 47 files according to TypeScript)
+  - Have not tried patching yet to get this number down
+
+### Comparison Chart
+
+This isn't comprehensive. It just highlights some key points between the tools. 
+
+|                  |  [Hey](https://heyapi.dev/openapi-ts/core)  |  [Kubb](https://kubb.dev/plugins/core/)  |
+|------------------|-------|--------|
+| Fetch Client     |  ✅   |   ✅   |
+| Axios Client     |  ✅   |   ✅   |
+| Ky Client        |  ✅   |   ✅   |
+| TypeScript types |  ✅   |   ✅   |
+| Zod Schemas      |  ✅   |   ✅   |
+| Mock Data        |  ❌ (Coming soon)   |   ✅   |
+| Angular support  |  ✅   |   ❌   |
+| Generates valid code  |  ✅ (5 errors in 2 files according to TypeScript)  |   ❌  (115 errors in 47 files according to TypeScript)  |
+
+## Conclusion
+
+I had the most success with using https://heyapi.dev to generate a TypeScript SDK. With minor patching to the source OpenAPI spec, it generates a feature-rich fetch client, valid Zod schemas, and valid TypeScript types. Most types and schemas seem correct, but some are inaccurate due to inaccuracy and flaws in the source OpenAPI specification.
