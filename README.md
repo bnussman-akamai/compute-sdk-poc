@@ -58,3 +58,6 @@ With minor patching to the source OpenAPI spec, it generates a feature-rich fetc
 <img src="https://github.com/user-attachments/assets/602154b2-39d2-44bd-b720-d8b6e5083f52" width="670px" />
 
 You view [auto-generated reference docs](https://bnussman-akamai.github.io/compute-sdk-poc/functions/sdk.gen.postLinodeInstance.html) of the SDK to get an idea of what the final result is like.
+
+<img src="https://github.com/user-attachments/assets/8c0edfeb-a667-43c1-86a7-ee43be81355d" width="670px" />
+
