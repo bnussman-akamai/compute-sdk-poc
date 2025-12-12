@@ -2,6 +2,8 @@
 
 This repo contains different attempts for generating TypeScript SDKs from the [Linode OpenAPI spesification](https://github.com/linode/linode-api-docs/blob/development/openapi.json) using different tools.
 
+Generating TypeScript SDKs from OpenAPI specifications can make frontend teams more efficent by automating the tedious work of mantaining the SDK.
+
 Each folder in the `packages` directory represents a different tool being used to generate a TypeScript SDK.
 The `examples` directory is just used a manual playground for testing the generated SDKs.
 
