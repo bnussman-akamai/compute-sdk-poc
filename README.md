@@ -17,7 +17,8 @@ You view [auto-generated reference docs](https://bnussman-akamai.github.io/compu
 
 <img src="https://github.com/user-attachments/assets/8c0edfeb-a667-43c1-86a7-ee43be81355d" width="670px" />
 
-For teams and/or apps that would like to generate their API calls and types from an OpenAPI specification, Hey API may be a great option as shown in this proof of concept.
+For teams and/or apps that would like to auto-generate their API calls and types from an OpenAPI specification, Hey API may already be a great option as shown in this proof of concept in [`packages/openapi-ts`](https://github.com/bnussman-akamai/compute-sdk-poc/tree/main/packages/openapi-ts). 
+
 Once Hey API supports [generating mock data](https://heyapi.dev/openapi-ts/plugins/faker) (similar to Linode Cloud Manager's [factories](https://github.com/linode/manager/tree/develop/packages/manager/src/factories)), using an auto-generated TypeScript SDK will be a very compelling option for Linode/Akamai apps.
 
 ## Tools Tested
@@ -62,3 +63,14 @@ This isn't comprehensive. It just highlights some key points between the tools.
 | Angular support  |  ✅   |   ❌   |
 | Generates valid code  |  ✅ (5 errors in 2 files according to TypeScript)  |   ❌  (115 errors in 47 files according to TypeScript)  |
 
+## Future Work
+
+This proof of concept repo doesn't _fully_ automate SDK generation.
+
+If I were to "finish" making it fully automated, I'd write Github Actions workflows that...
+
+- automatically check for changes in the sourced OpenAPI spec
+- sync the `package.json` version to match the OpenAPI spec's version
+- and publish to npm
+
+That's all it would take to fully automate an auto-generated TypeScript SDK! 
