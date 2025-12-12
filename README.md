@@ -46,6 +46,7 @@ This isn't comprehensive. It just highlights some key points between the tools.
 | Ky Client        |  ✅   |   ✅   |
 | TypeScript types |  ✅   |   ✅   |
 | Zod Schemas      |  ✅   |   ✅   |
+| React Query hooks|  ✅   |   ✅   |
 | Mock Data        |  ❌ (Coming soon)   |   ✅   |
 | Angular support  |  ✅   |   ❌   |
 | Generates valid code  |  ✅ (5 errors in 2 files according to TypeScript)  |   ❌  (115 errors in 47 files according to TypeScript)  |
