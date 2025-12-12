@@ -18,7 +18,7 @@ You view [auto-generated reference docs](https://bnussman-akamai.github.io/compu
 <img src="https://github.com/user-attachments/assets/8c0edfeb-a667-43c1-86a7-ee43be81355d" width="670px" />
 
 For teams and/or apps that would like to generate their API calls and types from an OpenAPI specification, Hey API may be a great option as shown in this proof of concept.
-Once Hey API supports [generating mock data](https://heyapi.dev/openapi-ts/plugins/faker) (similar to Linode Cloud Manager's [factories](https://github.com/linode/manager/tree/develop/packages/manager/src/factories)), using an auto-generated TypeScript SDK will be a very compelling option. 
+Once Hey API supports [generating mock data](https://heyapi.dev/openapi-ts/plugins/faker) (similar to Linode Cloud Manager's [factories](https://github.com/linode/manager/tree/develop/packages/manager/src/factories)), using an auto-generated TypeScript SDK will be a very compelling option for Linode/Akamai apps.
 
 ## Tools Tested
 
